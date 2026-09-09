@@ -1,8 +1,8 @@
 # Publishes @origin89/brand to npm from a brand-v* tag through npm trusted
 # publishing: the job presents a GitHub OIDC token and npm checks it against the
-# publisher configured on the package. No npm token is stored. Provenance is
-# off until the repository is public; the registry refuses a provenance bundle
-# from a private source repository.
+# publisher configured on the package, and the publish carries a sigstore
+# provenance attestation that names this repository and workflow. No npm
+# token is stored.
 name: publish-brand
 
 on:
@@ -33,7 +33,7 @@ jobs:
           test "${GITHUB_REF_NAME}" = "brand-v${version}" || { echo "tag ${GITHUB_REF_NAME} is not brand-v${version}"; exit 1; }
       - run: npm run check
       - run: git diff --exit-code
-      - run: npm publish --access public
+      - run: npm publish --provenance --access public
 
   # The kit and the design guide ride on the same tag as release assets, so the
   # website links releases/latest/download/<name> and never changes a URL.
