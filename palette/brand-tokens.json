@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "source": "packages/tokens/src/palette.mjs",
+  "snapshot_date": "2026-09-06",
+  "brand": {
+    "blue": "#2b4a97",
+    "ink": "#07090c",
+    "chalk": "#e7eaee",
+    "paper": "#f4f3ef"
+  },
+  "typography": {
+    "wordmark": "Michroma, optically weighted outlined artwork",
+    "body": "Inter Tight",
+    "data": "IBM Plex Mono"
+  },
+  "themes": {
+    "dark": {
+      "page": "#07090c",
+      "surface": "#0d1116",
+      "surface-raised": "#12171e",
+      "line": "#1e252e",
+      "line-strong": "#2b343f",
+      "focus": "#ffffff",
+      "fg": "#e7eaee",
+      "muted": "#9aa5b1",
+      "faint": "#707b87",
+      "action": "#2b4a97",
+      "action-lit": "#3f61b3",
+      "link": "#6279ad",
+      "on-fill": "#ffffff",
+      "nominal": "#2f9d64",
+      "warning": "#e9a13c",
+      "nominal-deep": "#168c54",
+      "warning-deep": "#b1721f",
+      "alarm": "#e05a3c",
+      "alarm-deep": "#a63b25",
+      "info": "#7fb0d4"
+    },
+    "light": {
+      "page": "#fbfcfa",
+      "surface": "#f1f3f0",
+      "surface-raised": "#ffffff",
+      "line": "#dfe3e6",
+      "line-strong": "#c4ccd2",
+      "focus": "#2b4a97",
+      "fg": "#11161a",
+      "muted": "#4b5761",
+      "faint": "#69747d",
+      "action": "#2b4a97",
+      "action-lit": "#3f61b3",
+      "link": "#2b4a97",
+      "on-fill": "#ffffff",
+      "nominal": "#4c7d5f",
+      "warning": "#9f6601",
+      "nominal-deep": "#4c7d5f",
+      "warning-deep": "#a26405",
+      "alarm": "#ca4628",
+      "alarm-deep": "#a63b25",
+      "info": "#487899"
+    }
+  },
+  "materials_3d": {
+    "shell": "#172c50",
+    "ceramic": "#eadfcf",
+    "buddy": "#594132",
+    "buddy_belly": "#b29879",
+    "buddy_muzzle": "#281c17",
+    "buddy_beard": "#493022",
+    "buddy_hoof": "#352b24",
+    "buddy_antler": "#927a57"
+  }
+}

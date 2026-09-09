@@ -1,0 +1,4 @@
+# Rendered guides and archives are not reviewable text.
+*.pdf binary
+*.ico binary
+*.ttf binary
