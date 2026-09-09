@@ -1,7 +1,7 @@
 {
   "name": "@origin89/brand",
-  "version": "0.1.3",
-  "description": "Origin89 identity: colour tokens for both themes, logos, icons and fonts.",
+  "version": "0.2.0",
+  "description": "Origin89 identity: colour tokens for both themes, logos, icons, fonts and Buddy at web sizes.",
   "license": "SEE LICENSE IN LICENSE.md",
   "homepage": "https://origin89.com",
   "repository": {
@@ -22,7 +22,8 @@
     "./tokens/colour": "./tokens/colour.mjs",
     "./logos/*": "./logos/*",
     "./icons/*": "./icons/*",
-    "./fonts/*": "./fonts/*"
+    "./fonts/*": "./fonts/*",
+    "./art/*": "./art/*"
   },
   "files": [
     "brand.json",
@@ -30,6 +31,7 @@
     "logos",
     "icons",
     "fonts",
+    "art",
     "LICENSE.md",
     "README.md"
   ],
@@ -41,5 +43,8 @@
     "verify": "node palette/verify.mjs && node verify.mjs",
     "check": "npm run build && npm run verify && npm run kit",
     "kit": "node kit.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.4"
   }
 }

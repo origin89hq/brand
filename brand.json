@@ -1,6 +1,6 @@
 {
   "name": "Origin89",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "names": {
     "company": "Origin89",
     "hardware": "Origin89 Controller",
@@ -122,6 +122,44 @@
       "logos/wordmark-black.svg",
       "logos/wordmark-blue.svg",
       "logos/wordmark-white.svg"
+    ]
+  },
+  "art": {
+    "expressions": [
+      "welcoming",
+      "explaining",
+      "thinking",
+      "delighted",
+      "concerned",
+      "surprised",
+      "playful"
+    ],
+    "portrait": 1280,
+    "avatar": 384,
+    "files": [
+      "art/portrait-welcoming.webp",
+      "art/portrait-welcoming-transparent.webp",
+      "art/avatar-welcoming.webp",
+      "art/portrait-explaining.webp",
+      "art/portrait-explaining-transparent.webp",
+      "art/avatar-explaining.webp",
+      "art/portrait-thinking.webp",
+      "art/portrait-thinking-transparent.webp",
+      "art/avatar-thinking.webp",
+      "art/portrait-delighted.webp",
+      "art/portrait-delighted-transparent.webp",
+      "art/avatar-delighted.webp",
+      "art/portrait-concerned.webp",
+      "art/portrait-concerned-transparent.webp",
+      "art/avatar-concerned.webp",
+      "art/portrait-surprised.webp",
+      "art/portrait-surprised-transparent.webp",
+      "art/avatar-surprised.webp",
+      "art/portrait-playful.webp",
+      "art/portrait-playful-transparent.webp",
+      "art/avatar-playful.webp",
+      "art/avatar-round.webp",
+      "art/studio-transparent.webp"
     ]
   },
   "icons": {
@@ -375,6 +413,146 @@
         "bytes": 64344,
         "sha256": "b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87",
         "source": "identity/fonts/Michroma-Regular.ttf"
+      }
+    ],
+    "art": [
+      {
+        "file": "art/portrait-welcoming.webp",
+        "bytes": 172436,
+        "sha256": "169a5f7fc056c00b55b0272ffeefb88dc86c052ce69b1ba829892959f104ef87",
+        "source": "buddy/presentation/portrait.png"
+      },
+      {
+        "file": "art/portrait-welcoming-transparent.webp",
+        "bytes": 261944,
+        "sha256": "9bd7e5b49bf90736ddf6b201fd5a62c8686491b6f57be6ebd3494db5877e5df2",
+        "source": "buddy/presentation/portrait-transparent.png"
+      },
+      {
+        "file": "art/avatar-welcoming.webp",
+        "bytes": 25662,
+        "sha256": "5feece8e4f9fb7b7e61b02a7f33e975d0804bc2a05181bbb1d03d73ed26fa84d",
+        "source": "buddy/avatar/buddy-welcoming.png"
+      },
+      {
+        "file": "art/portrait-explaining.webp",
+        "bytes": 175792,
+        "sha256": "8de878499dace07c38557a6771201156123b3333df04116515ec364ff9b1d898",
+        "source": "buddy/presentation/portrait-explaining.png"
+      },
+      {
+        "file": "art/portrait-explaining-transparent.webp",
+        "bytes": 280918,
+        "sha256": "3b12b920c31c9a7943c3264849cc720a5f26ac3840c33b5f6e7d6cd6da416f64",
+        "source": "buddy/presentation/portrait-explaining-transparent.png"
+      },
+      {
+        "file": "art/avatar-explaining.webp",
+        "bytes": 26140,
+        "sha256": "a3b00084c2ce6893ca3835fda9c4b4a6410866b18f0e17d6e2903695aa07090c",
+        "source": "buddy/avatar/buddy-explaining.png"
+      },
+      {
+        "file": "art/portrait-thinking.webp",
+        "bytes": 172356,
+        "sha256": "d89453f2ab7bcf00a00f3a523725955d3189dee3b97bb92b98b7ac81252b6db0",
+        "source": "buddy/presentation/portrait-thinking.png"
+      },
+      {
+        "file": "art/portrait-thinking-transparent.webp",
+        "bytes": 268188,
+        "sha256": "92d238c9eb122e4d16a02ee0958f932b3c5b2b7e09e9974a3b71d214743a22ae",
+        "source": "buddy/presentation/portrait-thinking-transparent.png"
+      },
+      {
+        "file": "art/avatar-thinking.webp",
+        "bytes": 25872,
+        "sha256": "8ec50106c88950bb45b7449481d5bab27362253573958b98a2a74138f0e22f99",
+        "source": "buddy/avatar/buddy-thinking.png"
+      },
+      {
+        "file": "art/portrait-delighted.webp",
+        "bytes": 172692,
+        "sha256": "e296dc88442025539f597d6ef2d6248d4ebdcd54ba99644732fb875d18b61e0f",
+        "source": "buddy/presentation/portrait-delighted.png"
+      },
+      {
+        "file": "art/portrait-delighted-transparent.webp",
+        "bytes": 262130,
+        "sha256": "fcb3cd40d3699b4cf7669c16ec5c5190fb081f709b4cbf08dd5ce517da37ea50",
+        "source": "buddy/presentation/portrait-delighted-transparent.png"
+      },
+      {
+        "file": "art/avatar-delighted.webp",
+        "bytes": 26466,
+        "sha256": "bfb09d3f2c22c75ba06b7155da63d133c9fd5b651f9dc1728999d4587ffcafee",
+        "source": "buddy/avatar/buddy-delighted.png"
+      },
+      {
+        "file": "art/portrait-concerned.webp",
+        "bytes": 173454,
+        "sha256": "50963da397dcc6e9aeb65dabe28636204f20cb6976a31bf9c09b053a6e11f093",
+        "source": "buddy/presentation/portrait-concerned.png"
+      },
+      {
+        "file": "art/portrait-concerned-transparent.webp",
+        "bytes": 261944,
+        "sha256": "b46a75e39bd6bca2007416715c7ed0abb79c9d11043bc1fff0077f1ac605a953",
+        "source": "buddy/presentation/portrait-concerned-transparent.png"
+      },
+      {
+        "file": "art/avatar-concerned.webp",
+        "bytes": 25614,
+        "sha256": "a45962502ebe92ac467a57a3d0e7defb7f095d8b006f2a5b0877ca6b2a6a9b9c",
+        "source": "buddy/avatar/buddy-concerned.png"
+      },
+      {
+        "file": "art/portrait-surprised.webp",
+        "bytes": 176386,
+        "sha256": "32b369cfe99ad906e546fdff184be79095ed312abcf579df75062c429160baf0",
+        "source": "buddy/presentation/portrait-surprised.png"
+      },
+      {
+        "file": "art/portrait-surprised-transparent.webp",
+        "bytes": 261986,
+        "sha256": "2561608511261d32e3973a0e6fb7a7edeedfbb46c555e5458f5706e85f205ebc",
+        "source": "buddy/presentation/portrait-surprised-transparent.png"
+      },
+      {
+        "file": "art/avatar-surprised.webp",
+        "bytes": 27558,
+        "sha256": "ca370fa98894fc6a460305d58acb7902d1823a9e0ac174db3d5be5ca6f9ff88f",
+        "source": "buddy/avatar/buddy-surprised.png"
+      },
+      {
+        "file": "art/portrait-playful.webp",
+        "bytes": 172078,
+        "sha256": "84ddbaa262c3d60784573b29b38b099971ed3a70200eb89f7890c9077e900909",
+        "source": "buddy/presentation/portrait-playful.png"
+      },
+      {
+        "file": "art/portrait-playful-transparent.webp",
+        "bytes": 260240,
+        "sha256": "18f9cf6e56f0d63787323d1e7237b1c876a9d1de7e3d61a8dad08e6d6a1ec4ff",
+        "source": "buddy/presentation/portrait-playful-transparent.png"
+      },
+      {
+        "file": "art/avatar-playful.webp",
+        "bytes": 25890,
+        "sha256": "afa0f6d89ffca1a20ac7bea34ef9ac7b3f73f23f38e477e5721067993cf18f84",
+        "source": "buddy/avatar/buddy-playful.png"
+      },
+      {
+        "file": "art/avatar-round.webp",
+        "bytes": 28840,
+        "sha256": "3260658a6f26b2a34fc3257fcf902b0e1e46d6379ffbaa2b0fdf51e273eede34",
+        "source": "buddy/avatar/buddy-welcoming-round.png"
+      },
+      {
+        "file": "art/studio-transparent.webp",
+        "bytes": 135606,
+        "sha256": "b0a4cee2f505050562de5511d98f1ff453bf11042cd540ac7e83077525ea548e",
+        "source": "buddy/presentation/studio-transparent.png"
       }
     ]
   },

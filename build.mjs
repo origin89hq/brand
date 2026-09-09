@@ -6,6 +6,7 @@
 //! The outputs are committed. Reshape this script, run it, `git diff`: an empty
 //! diff proves the change was pure shape.
 import { createHash } from "node:crypto";
+import sharp from "sharp";
 import { cpSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -33,6 +34,34 @@ for (const [dir, pairs] of Object.entries(copies)) {
   }
 }
 
+// Buddy at web sizes. The Blender renders behind these are 66 MB of PNG, which
+// no package should carry and no consumer wants; what a site actually needs is
+// the largest size it displays. 1280 px for a portrait, 384 px for an avatar,
+// webp because the same set as PNG is 31 MB rather than 3.
+const expressions = ["welcoming", "explaining", "thinking", "delighted", "concerned", "surprised", "playful"];
+const stem = (e) => (e === "welcoming" ? "portrait" : `portrait-${e}`);
+const art = [
+  ...expressions.flatMap((e) => [
+    [`buddy/presentation/${stem(e)}.png`, `art/portrait-${e}.webp`, 1280],
+    [`buddy/presentation/${stem(e)}-transparent.png`, `art/portrait-${e}-transparent.webp`, 1280],
+    [`buddy/avatar/buddy-${e}.png`, `art/avatar-${e}.webp`, 384],
+  ]),
+  ["buddy/avatar/buddy-welcoming-round.png", "art/avatar-round.webp", 384],
+  ["buddy/presentation/studio-transparent.png", "art/studio-transparent.webp", 1280],
+];
+rmSync(join(out, "art"), { recursive: true, force: true });
+mkdirSync(join(out, "art"), { recursive: true });
+shipped.art = []; manifest.art = [];
+for (const [from, to, width] of art) {
+  await sharp(join(here, from))
+    .resize({ width, withoutEnlargement: true })
+    .webp({ quality: 92, alphaQuality: 100, effort: 6 })
+    .toFile(join(out, to));
+  shipped.art.push(to);
+  manifest.art.push({ file: to, bytes: statSync(join(out, to)).size, sha256: sha256(join(out, to)), source: from });
+}
+if (shipped.art.length !== expressions.length * 3 + 2) throw new Error("Buddy art set is incomplete");
+
 const palette = JSON.parse(readFileSync(join(here, "identity/tokens/brand-tokens.json"), "utf8"));
 const typography = {
   wordmark: { family: "Michroma", note: "The wordmark is optically weighted outlined artwork; use the logo files, typing the name does not recreate it.", files: ["fonts/Michroma-Regular.ttf"], licence: "fonts/Michroma-OFL.txt" },
@@ -49,6 +78,7 @@ const brand = {
   colour: { brand: palette.brand, themes: palette.themes, source: "palette/src/palette.mjs", snapshot: palette.snapshot_date },
   typography,
   logos: { primarySymbol: "logos/plate-89-blue.svg", variants: shipped.logos },
+  art: { expressions, portrait: 1280, avatar: 384, files: shipped.art },
   icons: { favicon: "icons/favicon.svg", offgrid: "icons/offgrid-flat-master.svg" },
   files: manifest,
   policy: "LICENSE.md",
