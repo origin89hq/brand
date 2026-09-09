@@ -31,4 +31,4 @@ jobs:
           test "${GITHUB_REF_NAME}" = "brand-v${version}" || { echo "tag ${GITHUB_REF_NAME} is not brand-v${version}"; exit 1; }
       - run: npm run check
       - run: git diff --exit-code
-      - run: npm publish --provenance --access public
+      - run: npm publish --access public
