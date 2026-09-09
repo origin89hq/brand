@@ -1,0 +1,43 @@
+{
+  "base": "buddy/blender/buddy.blend",
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "recipe_sha256": "d3bfab6ee0e2c83b973891678033777261f828a60499230cfe15c4edce2a606b",
+  "look": "studio",
+  "expression": "welcoming",
+  "frame": 110,
+  "samples": 256,
+  "size": [
+    1600,
+    1792
+  ],
+  "camera": {
+    "type": "PERSP",
+    "lens": 70.0,
+    "position": [
+      2.1922149658203125,
+      -8.24483585357666,
+      2.3760619163513184
+    ],
+    "target": [
+      0.053998589515686035,
+      -0.22652557492256165,
+      1.707869291305542
+    ]
+  },
+  "tongue_out": 0.0,
+  "changes": [
+    "lighting",
+    "perspective framing",
+    "eye shader",
+    "calm facial pose"
+  ],
+  "preserved": [
+    "native body geometry",
+    "smooth directional coat",
+    "rig"
+  ],
+  "render_sha256": "8ca68b97629cd44ccbdbb056738a8403385677093ce2afa51d7d9462c38c9fd0",
+  "scene_sha256": "be9ccf3c3bc2d52e3c1c4d2c502c8e0a8ad3cafe0b5e66db7e5413c5f2be1443",
+  "denoising": true,
+  "depth_of_field": false
+}

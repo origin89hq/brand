@@ -1,0 +1,5 @@
+fonttools
+shapely
+reportlab
+Pillow
+pypdf

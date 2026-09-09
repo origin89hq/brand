@@ -1,0 +1,164 @@
+{
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "checks": {
+    "shared_skeletal_landmarks": {
+      "passed": true,
+      "detail": 22
+    },
+    "anatomy_layers": {
+      "passed": true,
+      "detail": [
+        "05 Fur",
+        "01 Skeleton",
+        "02 Organs",
+        "03 Muscles",
+        "04 Skin"
+      ]
+    },
+    "manifold_Skin | continuous torso and limbs": {
+      "passed": true,
+      "detail": {
+        "non_manifold_edges": 0,
+        "vertices": 78570
+      }
+    },
+    "manifold_Skin | long moose head and integrated muzzle": {
+      "passed": true,
+      "detail": {
+        "non_manifold_edges": 0,
+        "vertices": 103730
+      }
+    },
+    "connected_Antler | cupped palmate L": {
+      "passed": true,
+      "detail": {
+        "non_manifold_edges": 0,
+        "components": [
+          92594
+        ]
+      }
+    },
+    "connected_Antler | cupped palmate R": {
+      "passed": true,
+      "detail": {
+        "non_manifold_edges": 0,
+        "components": [
+          92608
+        ]
+      }
+    },
+    "normalized_skin_weights": {
+      "passed": true,
+      "detail": {
+        "min": 0.9999997913837433,
+        "max": 1.000000047095682
+      }
+    },
+    "normalized_arm_weights": {
+      "passed": true,
+      "detail": {
+        "min": 0.9999998528708431,
+        "max": 1.000000040519808
+      }
+    },
+    "continuous_shoulder_skin": {
+      "passed": true,
+      "detail": {
+        "skin_components": 1,
+        "vertices_blending_arm_and_torso": 5758
+      }
+    },
+    "attached_native_fur": {
+      "passed": true,
+      "detail": 475737
+    },
+    "recessed_nostril_geometry": {
+      "passed": true,
+      "detail": {
+        "cavity_faces": 90944
+      }
+    },
+    "independent_jaw": {
+      "passed": true,
+      "detail": {
+        "jaw_parent": "head",
+        "lower_teeth": 8,
+        "upper_incisors": 0
+      }
+    },
+    "step_skin_deformation": {
+      "passed": true,
+      "detail": 0.157700777053833
+    },
+    "continuous_arm_gesture": {
+      "passed": true,
+      "detail": {
+        "travel": 0.8217564821243286
+      }
+    },
+    "standing_foot_contact": {
+      "passed": true,
+      "detail": {
+        "1": {
+          "L": 0.005039972718805075,
+          "R": 0.005039972718805075
+        },
+        "40": {
+          "L": 0.005039972718805075,
+          "R": 0.005039972718805075
+        },
+        "80": {
+          "L": 0.08385355770587921,
+          "R": 0.005000070668756962
+        }
+      }
+    },
+    "pose_floor_clearance": {
+      "passed": true,
+      "detail": {
+        "1": {
+          "L": 0.005039972718805075,
+          "R": 0.005039972718805075
+        },
+        "40": {
+          "L": 0.005039972718805075,
+          "R": 0.005039972718805075
+        },
+        "80": {
+          "L": 0.08385355770587921,
+          "R": 0.005000070668756962
+        }
+      }
+    },
+    "hooves_seated_in_pasterns": {
+      "passed": true,
+      "detail": {
+        "sampled_crown_centers": 12,
+        "maximum_surface_offset": -0.04947990970686078
+      }
+    },
+    "hand_hooves_seated_in_wrists": {
+      "passed": true,
+      "detail": {
+        "sampled_crown_centers": 12,
+        "maximum_surface_offset": -0.0434658033773303
+      }
+    },
+    "fur_roots_follow_posed_skin": {
+      "passed": true,
+      "detail": {
+        "sampled_roots_in_three_poses": 771,
+        "maximum_skin_gap": 2.602376127924799e-07
+      }
+    },
+    "organ_centers_enclosed": {
+      "passed": true,
+      "detail": {
+        "outside": [],
+        "note": "Checks guide centers, not physiological accuracy or all organ surfaces."
+      }
+    }
+  },
+  "passed": true,
+  "scope": "Stylized biped construction and three static pose tests; not a validated anatomical simulation or finished walk cycle."
+}

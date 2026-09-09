@@ -1,0 +1,12 @@
+{
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "composition": "source/build_expression_board.py",
+  "source_renders": [
+    "../buddy/avatar/buddy-welcoming-round.png",
+    "../buddy/avatar/buddy-explaining-round.png",
+    "../buddy/avatar/buddy-thinking-round.png",
+    "../buddy/avatar/buddy-delighted-round.png",
+    "../buddy/avatar/buddy-concerned-round.png",
+    "../buddy/avatar/buddy-surprised-round.png"
+  ]
+}

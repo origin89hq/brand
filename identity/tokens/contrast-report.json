@@ -1,0 +1,38 @@
+[
+  {
+    "label": "White on bridge blue",
+    "fg": "#ffffff",
+    "bg": "#2b4a97",
+    "ratio": 8.303338776815085
+  },
+  {
+    "label": "Chalk on bridge blue",
+    "fg": "#e7eaee",
+    "bg": "#2b4a97",
+    "ratio": 6.880510908047755
+  },
+  {
+    "label": "Bridge blue on paper",
+    "fg": "#2b4a97",
+    "bg": "#f4f3ef",
+    "ratio": 7.478245950913517
+  },
+  {
+    "label": "Chalk on ink",
+    "fg": "#e7eaee",
+    "bg": "#07090c",
+    "ratio": 16.519105610183747
+  },
+  {
+    "label": "Bridge blue on ink",
+    "fg": "#2b4a97",
+    "bg": "#07090c",
+    "ratio": 2.4008545049848347
+  },
+  {
+    "label": "Dark link on ink",
+    "fg": "#6279ad",
+    "bg": "#07090c",
+    "ratio": 4.6113787849580685
+  }
+]

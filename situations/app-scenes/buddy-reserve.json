@@ -1,0 +1,14 @@
+{
+  "buddy_source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "scene_source_sha256": "c34a56d4de0b2426e4f5bda6580f19cc97dc195f179fd8dde07efca42e25e13a",
+  "source": "buddy/blender/buddy.blend",
+  "native_blender_render": true,
+  "transparent": true,
+  "size": [
+    1400,
+    1400
+  ],
+  "samples": 192,
+  "state": "reserve-suggested",
+  "illustrative": true
+}

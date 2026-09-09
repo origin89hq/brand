@@ -1,0 +1,60 @@
+# Publishes @origin89/brand to npm from a brand-v* tag through npm trusted
+# publishing: the job presents a GitHub OIDC token and npm checks it against the
+# publisher configured on the package. No npm token is stored. Provenance is
+# off until the repository is public; the registry refuses a provenance bundle
+# from a private source repository.
+name: publish-brand
+
+on:
+  push:
+    tags:
+      - "brand-v*"
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      # The tag must name the version the package declares, or the publish is a lie about what moved.
+      - name: Check the tag against package.json
+        run: |
+          version=$(node -p "require('./package.json').version")
+          test "${GITHUB_REF_NAME}" = "brand-v${version}" || { echo "tag ${GITHUB_REF_NAME} is not brand-v${version}"; exit 1; }
+      - run: npm run check
+      - run: git diff --exit-code
+      - run: npm publish --access public
+
+  # The kit and the design guide ride on the same tag as release assets, so the
+  # website links releases/latest/download/<name> and never changes a URL.
+  release:
+    needs: publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+      - run: npm run build && npm run kit
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#brand-v}"
+          gh release create "${GITHUB_REF_NAME}" dist/origin89-brand-kit.zip identity/guide/output/pdf/origin89-design-guide.pdf \
+            --title "brand ${version}" \
+            --notes "Brand kit ${version}. Logos as SVG and PNG, icons, fonts with their OFL files, the colour tokens and the design guide; terms in LICENSE.md inside the archive. The npm package @origin89/brand@${version} carries the same identity for code."

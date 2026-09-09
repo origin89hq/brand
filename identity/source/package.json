@@ -1,0 +1,8 @@
+{
+  "name": "origin89-plate89-brand-builders",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "sharp": "0.35.4"
+  }
+}

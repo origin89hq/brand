@@ -1,0 +1,13 @@
+{
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "composition": "source/build_review.py",
+  "source_renders": [
+    "buddy-feet-side",
+    "buddy-antlers",
+    "buddy-hands"
+  ],
+  "presentation_source": "../buddy/presentation/studio-transparent.png",
+  "presentation_sha256": "855afe9e0f3e3ae2de6893b4c1b8253cf6bec000702e0dbc1051b50e3baa2757",
+  "portrait_source": "../buddy/presentation/portrait-transparent.png",
+  "portrait_sha256": "bff66fdadaee86c150f78554c28875066c9f32142d901adcc56a0c9fc7e39e51"
+}

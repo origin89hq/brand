@@ -1,0 +1,382 @@
+{
+  "name": "Origin89",
+  "version": "0.1.3",
+  "names": {
+    "company": "Origin89",
+    "hardware": "Origin89 Controller",
+    "app": "Origin89 Offgrid",
+    "assistant": "Buddy",
+    "protocol": "KM43"
+  },
+  "colour": {
+    "brand": {
+      "blue": "#2b4a97",
+      "ink": "#07090c",
+      "chalk": "#e7eaee",
+      "paper": "#f4f3ef"
+    },
+    "themes": {
+      "dark": {
+        "page": "#07090c",
+        "surface": "#0d1116",
+        "surface-raised": "#12171e",
+        "line": "#1e252e",
+        "line-strong": "#2b343f",
+        "focus": "#ffffff",
+        "fg": "#e7eaee",
+        "muted": "#9aa5b1",
+        "faint": "#707b87",
+        "action": "#2b4a97",
+        "action-lit": "#3f61b3",
+        "link": "#6279ad",
+        "on-fill": "#ffffff",
+        "nominal": "#2f9d64",
+        "warning": "#e9a13c",
+        "nominal-deep": "#168c54",
+        "warning-deep": "#b1721f",
+        "alarm": "#e05a3c",
+        "alarm-deep": "#a63b25",
+        "info": "#7fb0d4"
+      },
+      "light": {
+        "page": "#fbfcfa",
+        "surface": "#f1f3f0",
+        "surface-raised": "#ffffff",
+        "line": "#dfe3e6",
+        "line-strong": "#c4ccd2",
+        "focus": "#2b4a97",
+        "fg": "#11161a",
+        "muted": "#4b5761",
+        "faint": "#69747d",
+        "action": "#2b4a97",
+        "action-lit": "#3f61b3",
+        "link": "#2b4a97",
+        "on-fill": "#ffffff",
+        "nominal": "#4c7d5f",
+        "warning": "#9f6601",
+        "nominal-deep": "#4c7d5f",
+        "warning-deep": "#a26405",
+        "alarm": "#ca4628",
+        "alarm-deep": "#a63b25",
+        "info": "#487899"
+      }
+    },
+    "source": "palette/src/palette.mjs",
+    "snapshot": "2026-09-06"
+  },
+  "typography": {
+    "wordmark": {
+      "family": "Michroma",
+      "note": "The wordmark is optically weighted outlined artwork; use the logo files, typing the name does not recreate it.",
+      "files": [
+        "fonts/Michroma-Regular.ttf"
+      ],
+      "licence": "fonts/Michroma-OFL.txt"
+    },
+    "text": {
+      "family": "Inter Tight",
+      "weights": [
+        400,
+        600,
+        700
+      ],
+      "files": [
+        "fonts/InterTight-400.ttf",
+        "fonts/InterTight-600.ttf",
+        "fonts/InterTight-700.ttf",
+        "fonts/InterTight-Variable.ttf"
+      ],
+      "licence": "fonts/InterTight-OFL.txt"
+    },
+    "data": {
+      "family": "IBM Plex Mono",
+      "files": [
+        "fonts/IBMPlexMono-Regular.ttf"
+      ],
+      "licence": "fonts/IBMPlexMono-OFL.txt"
+    }
+  },
+  "logos": {
+    "primarySymbol": "logos/plate-89-blue.svg",
+    "variants": [
+      "logos/origin89-buddy-black.svg",
+      "logos/origin89-buddy-blue.svg",
+      "logos/origin89-buddy-white.svg",
+      "logos/origin89-controller-black.svg",
+      "logos/origin89-controller-blue.svg",
+      "logos/origin89-controller-white.svg",
+      "logos/origin89-horizontal-black.svg",
+      "logos/origin89-horizontal-blue.svg",
+      "logos/origin89-horizontal-white.svg",
+      "logos/origin89-offgrid-black.svg",
+      "logos/origin89-offgrid-blue.svg",
+      "logos/origin89-offgrid-white.svg",
+      "logos/origin89-stacked-black.svg",
+      "logos/origin89-stacked-blue.svg",
+      "logos/origin89-stacked-white.svg",
+      "logos/plate-89-black.svg",
+      "logos/plate-89-blue.svg",
+      "logos/plate-89-knockout-black.svg",
+      "logos/plate-89-knockout-white.svg",
+      "logos/plate-89-white.svg",
+      "logos/wordmark-black.svg",
+      "logos/wordmark-blue.svg",
+      "logos/wordmark-white.svg"
+    ]
+  },
+  "icons": {
+    "favicon": "icons/favicon.svg",
+    "offgrid": "icons/offgrid-flat-master.svg"
+  },
+  "files": {
+    "tokens": [
+      {
+        "file": "tokens/tailwind.css",
+        "bytes": 1306,
+        "sha256": "2b4347530a023c2a57d9784269ca9061353c8bb438b4db36938c26768db61bec",
+        "source": "palette/tailwind.css"
+      },
+      {
+        "file": "tokens/themes.css",
+        "bytes": 8422,
+        "sha256": "baf60dbb07b7935ff5ffd445093fd3f4ad9013785e40eef9ea0f44277d938dd3",
+        "source": "palette/themes.css"
+      },
+      {
+        "file": "tokens/palette.mjs",
+        "bytes": 7802,
+        "sha256": "d766d18c237ff9e382c029ac9eb2d267f6e67a7ad8026cc09ea3561dedc2fec3",
+        "source": "palette/src/palette.mjs"
+      },
+      {
+        "file": "tokens/colour.mjs",
+        "bytes": 4690,
+        "sha256": "5ab46b4bb6a9b42c007783ffa2718a529a2659465a9e1ef7351d1efaa7c3ba35",
+        "source": "palette/src/colour.mjs"
+      }
+    ],
+    "logos": [
+      {
+        "file": "logos/origin89-buddy-black.svg",
+        "bytes": 148615,
+        "sha256": "9c1cc293c557cdfe43f9125b2d9342c00d9eedb23d82eee39a2509ef57b7ae3b",
+        "source": "identity/logos/origin89-buddy-black.svg"
+      },
+      {
+        "file": "logos/origin89-buddy-blue.svg",
+        "bytes": 148615,
+        "sha256": "e409f1f0ecbd87585e7fec93fde4abe46e95b68a2740eb4560ec61eafd25050a",
+        "source": "identity/logos/origin89-buddy-blue.svg"
+      },
+      {
+        "file": "logos/origin89-buddy-white.svg",
+        "bytes": 148615,
+        "sha256": "60f63d33de44c14d91cb6dcd1c2479886684d584040297f6f17de4e9d1f8f8ce",
+        "source": "identity/logos/origin89-buddy-white.svg"
+      },
+      {
+        "file": "logos/origin89-controller-black.svg",
+        "bytes": 153438,
+        "sha256": "a9b1f09548a1f1b0448e3ac940851700595d05dc37a1795930310805b22234e4",
+        "source": "identity/logos/origin89-controller-black.svg"
+      },
+      {
+        "file": "logos/origin89-controller-blue.svg",
+        "bytes": 153438,
+        "sha256": "5c118c7615d790e4f9b62eb56c9345360c72f5c956d2ec55af7ce7ad9dc9c599",
+        "source": "identity/logos/origin89-controller-blue.svg"
+      },
+      {
+        "file": "logos/origin89-controller-white.svg",
+        "bytes": 153438,
+        "sha256": "e2bf6f8dfe5aa731586d1666407804b7f4d258718dcbf8d3bcc0b7e9287cc416",
+        "source": "identity/logos/origin89-controller-white.svg"
+      },
+      {
+        "file": "logos/origin89-horizontal-black.svg",
+        "bytes": 139408,
+        "sha256": "ea5dc8d4327cf3c01e95369b1946fd7a73f5993ffd67c5030a38ae0a53d19759",
+        "source": "identity/logos/origin89-horizontal-black.svg"
+      },
+      {
+        "file": "logos/origin89-horizontal-blue.svg",
+        "bytes": 139408,
+        "sha256": "1eedf2b513d076aac7efc30b1ed84da12b0daf8db96c9655fd98cfcdbd9945ae",
+        "source": "identity/logos/origin89-horizontal-blue.svg"
+      },
+      {
+        "file": "logos/origin89-horizontal-white.svg",
+        "bytes": 139408,
+        "sha256": "3a798e27ee7cfb73e7900ea237c713e94ec8bfc41fe673effd7778914c3dd102",
+        "source": "identity/logos/origin89-horizontal-white.svg"
+      },
+      {
+        "file": "logos/origin89-offgrid-black.svg",
+        "bytes": 151222,
+        "sha256": "448d5c1888d3397c0f2991b8435385ebc7780fec1e861b640ea1ef8d19b838e4",
+        "source": "identity/logos/origin89-offgrid-black.svg"
+      },
+      {
+        "file": "logos/origin89-offgrid-blue.svg",
+        "bytes": 151222,
+        "sha256": "4fc69455a4c8c48b70f1a73090efdde08a4d81b7fffe3999c30bfa1102b33961",
+        "source": "identity/logos/origin89-offgrid-blue.svg"
+      },
+      {
+        "file": "logos/origin89-offgrid-white.svg",
+        "bytes": 151222,
+        "sha256": "efb9e2bb6faa9a495cec75d5a8ae71bdc85bf8cea4071ded46b4e6b3abc70cc1",
+        "source": "identity/logos/origin89-offgrid-white.svg"
+      },
+      {
+        "file": "logos/origin89-stacked-black.svg",
+        "bytes": 139441,
+        "sha256": "6e2640e9535fdfa155fb4bea691315f8019f27a5cba79c80c0ad478c47457d0e",
+        "source": "identity/logos/origin89-stacked-black.svg"
+      },
+      {
+        "file": "logos/origin89-stacked-blue.svg",
+        "bytes": 139441,
+        "sha256": "eb7833cf27f01c6d1650c9b3bc39f241e21d6dffa96f205f1b2670c37322b563",
+        "source": "identity/logos/origin89-stacked-blue.svg"
+      },
+      {
+        "file": "logos/origin89-stacked-white.svg",
+        "bytes": 139441,
+        "sha256": "c5f8d21877a19e36db1a8097b0d7be1505be785f2d186335ba9402ae552bd330",
+        "source": "identity/logos/origin89-stacked-white.svg"
+      },
+      {
+        "file": "logos/plate-89-black.svg",
+        "bytes": 1430,
+        "sha256": "840b901dc9283aa35dd1a1430c1625851a9af0499d50e860594941454bb6a09d",
+        "source": "identity/logos/plate-89-black.svg"
+      },
+      {
+        "file": "logos/plate-89-blue.svg",
+        "bytes": 1430,
+        "sha256": "dc8384a2323d999b089077cdba1931716193fde45f7b0d7d0d2379d1af33f2d0",
+        "source": "identity/logos/plate-89-blue.svg"
+      },
+      {
+        "file": "logos/plate-89-knockout-black.svg",
+        "bytes": 1383,
+        "sha256": "9653a0b9fa1093fbaffd95a9d957da04c2b4aa189db7deaf4ba2428e8a74deaa",
+        "source": "identity/logos/plate-89-knockout-black.svg"
+      },
+      {
+        "file": "logos/plate-89-knockout-white.svg",
+        "bytes": 1383,
+        "sha256": "693cb2973b3f0a629239c9fb6819a26eb2087b2ed4bca0c4910c613be79642a2",
+        "source": "identity/logos/plate-89-knockout-white.svg"
+      },
+      {
+        "file": "logos/plate-89-white.svg",
+        "bytes": 1430,
+        "sha256": "8a5f53d214b6c57f57ee52c08e5f26bc9c20478e3ab1010fd537a31bd381af50",
+        "source": "identity/logos/plate-89-white.svg"
+      },
+      {
+        "file": "logos/wordmark-black.svg",
+        "bytes": 138037,
+        "sha256": "370133e1db2bd40b99b7cf6f5cc78660fd2e6341fa309edcf8040034b78cfae0",
+        "source": "identity/logos/wordmark-black.svg"
+      },
+      {
+        "file": "logos/wordmark-blue.svg",
+        "bytes": 138037,
+        "sha256": "370133e1db2bd40b99b7cf6f5cc78660fd2e6341fa309edcf8040034b78cfae0",
+        "source": "identity/logos/wordmark-blue.svg"
+      },
+      {
+        "file": "logos/wordmark-white.svg",
+        "bytes": 138037,
+        "sha256": "e83f3d6906769c92a33f0ed7643cd776ff0429f20cfba37623fdb8938a1e34b1",
+        "source": "identity/logos/wordmark-white.svg"
+      }
+    ],
+    "icons": [
+      {
+        "file": "icons/favicon.svg",
+        "bytes": 1435,
+        "sha256": "be8f3e735a840aef584cb04b6dc89d00ad49ac046d8f4a49cb21dde08d93b16b",
+        "source": "identity/icons/favicon.svg"
+      },
+      {
+        "file": "icons/favicon.ico",
+        "bytes": 3257,
+        "sha256": "112c973459de0f97189968999c23ae1a64c527c1cb85a47c3abf94cc47d74390",
+        "source": "identity/icons/favicon.ico"
+      },
+      {
+        "file": "icons/offgrid-flat-master.svg",
+        "bytes": 1511,
+        "sha256": "49dc0dd63ae48fd84bafaf25d319219f40550004c8dd86a8fcb6d10e90314be1",
+        "source": "identity/icons/offgrid-flat-master.svg"
+      },
+      {
+        "file": "icons/offgrid.ico",
+        "bytes": 17195,
+        "sha256": "e31ba3f59a39920fcb211401e7a54486bc0a96c68b69e003f27e1b75c1874897",
+        "source": "identity/icons/offgrid.ico"
+      }
+    ],
+    "fonts": [
+      {
+        "file": "fonts/IBMPlexMono-OFL.txt",
+        "bytes": 4456,
+        "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+        "source": "identity/fonts/IBMPlexMono-OFL.txt"
+      },
+      {
+        "file": "fonts/IBMPlexMono-Regular.ttf",
+        "bytes": 135580,
+        "sha256": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46",
+        "source": "identity/fonts/IBMPlexMono-Regular.ttf"
+      },
+      {
+        "file": "fonts/InterTight-400.ttf",
+        "bytes": 305928,
+        "sha256": "f3610270baa131f7b5dd2c469426af8fc8902cc04fee0ecd10c9d8c08e7a9caf",
+        "source": "identity/fonts/InterTight-400.ttf"
+      },
+      {
+        "file": "fonts/InterTight-600.ttf",
+        "bytes": 309824,
+        "sha256": "c371b7bd6cc02f5240c73bc178ef365b36fb8fcd9db7baa02d454672f12f5a6f",
+        "source": "identity/fonts/InterTight-600.ttf"
+      },
+      {
+        "file": "fonts/InterTight-700.ttf",
+        "bytes": 310440,
+        "sha256": "134e19d194738f57f6000179d90dedc253bbcbec0f6902380376bae485744770",
+        "source": "identity/fonts/InterTight-700.ttf"
+      },
+      {
+        "file": "fonts/InterTight-OFL.txt",
+        "bytes": 4383,
+        "sha256": "50240ab035cf1b6b3307940235481d515c4b6de3ab1fa843dbe59e7892cb9d58",
+        "source": "identity/fonts/InterTight-OFL.txt"
+      },
+      {
+        "file": "fonts/InterTight-Variable.ttf",
+        "bytes": 581588,
+        "sha256": "b81b73dcb64df3c230cabade7df6c5773bf863233f24c9ee51087519f1f88b6f",
+        "source": "identity/fonts/InterTight-Variable.ttf"
+      },
+      {
+        "file": "fonts/Michroma-OFL.txt",
+        "bytes": 4395,
+        "sha256": "33c39ce59a45bfb0dae3280e98bdb46be59d6d68efc62d4dc5fae90a26d2f393",
+        "source": "identity/fonts/Michroma-OFL.txt"
+      },
+      {
+        "file": "fonts/Michroma-Regular.ttf",
+        "bytes": 64344,
+        "sha256": "b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87",
+        "source": "identity/fonts/Michroma-Regular.ttf"
+      }
+    ]
+  },
+  "policy": "LICENSE.md"
+}
