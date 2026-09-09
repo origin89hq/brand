@@ -41,10 +41,11 @@
   "scripts": {
     "build": "node palette/build.mjs && node build.mjs",
     "verify": "node palette/verify.mjs && node verify.mjs",
-    "check": "npm run build && npm run verify && npm run kit",
+    "check": "pnpm run build && pnpm run verify && pnpm run kit",
     "kit": "node kit.mjs"
   },
   "devDependencies": {
     "sharp": "^0.35.4"
-  }
+  },
+  "packageManager": "pnpm@11.21.0"
 }
