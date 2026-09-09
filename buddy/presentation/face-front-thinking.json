@@ -1,0 +1,71 @@
+{
+  "base": "buddy/blender/buddy.blend",
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "scene_source": "buddy/presentation/face-front.blend",
+  "scene_source_sha256": "7fca50a8acf8a4e9cd8fa562a4956efbefa5ca5942a3ea42586dc2914062cb10",
+  "recipe_sha256": "12f15b9074643070df771319e0af660e54dcc39d8aced437214ef6dd7f22e5c2",
+  "render_sha256": "4112c29e6e13b5f7ff25321406de5ea6442b8105ac2a94c8f9d9df7158eaf081",
+  "look": "face-front",
+  "expression": "thinking",
+  "size": [
+    1920,
+    1920
+  ],
+  "samples": 256,
+  "camera": {
+    "type": "PERSP",
+    "lens": 135.0,
+    "position": [
+      0.0,
+      -5.650000095367432,
+      1.8600000143051147
+    ],
+    "rotation": [
+      1.5631482601165771,
+      -0.0,
+      0.0
+    ]
+  },
+  "transparent": true,
+  "alpha": "Native Cycles coverage; green added only to avatar exports",
+  "controls": {
+    "face_jaw_open": 0.0,
+    "face_smile": 0.0,
+    "face_lip_raise": 0.0,
+    "face_lip_lower": 0.0,
+    "face_smile_L": 0.6499999761581421,
+    "face_smile_R": -0.30000001192092896,
+    "face_cheek_raise_L": 0.3499999940395355,
+    "face_cheek_raise_R": 0.0,
+    "face_muzzle_scrunch": 0.0,
+    "face_tongue_out": 0.0,
+    "face_tongue_curl": 0.0,
+    "face_tongue_side": 0.0,
+    "face_tongue_twist": 0.0,
+    "face_tongue_widen": 0.0,
+    "face_lip_press": 0.0,
+    "face_lip_pucker": 0.0,
+    "face_blink_L": 0.0,
+    "face_upper_lid_L": 0.0,
+    "face_lower_lid_L": 0.0,
+    "face_brow_raise_L": 0.550000011920929,
+    "face_brow_tilt_L": 0.0,
+    "face_blink_R": 0.0,
+    "face_upper_lid_R": 0.41999998688697815,
+    "face_lower_lid_R": 0.0,
+    "face_brow_raise_R": 0.0,
+    "face_brow_tilt_R": -0.5
+  },
+  "preserved": [
+    "authored avatar scene",
+    "greeting controls",
+    "head and ear pose",
+    "camera",
+    "lights",
+    "materials",
+    "native geometry",
+    "fur"
+  ],
+  "denoising": true,
+  "depth_of_field": false
+}

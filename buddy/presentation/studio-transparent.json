@@ -1,0 +1,43 @@
+{
+  "base": "buddy/blender/buddy.blend",
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "recipe_sha256": "94ac9b618428c39eed346e716580c3a9c00f2c7477b0da9616102c7a3d404784",
+  "scene_source": "buddy/presentation/studio.blend",
+  "scene_source_sha256": "be9ccf3c3bc2d52e3c1c4d2c502c8e0a8ad3cafe0b5e66db7e5413c5f2be1443",
+  "look": "studio",
+  "expression": "welcoming",
+  "frame": 110,
+  "samples": 256,
+  "size": [
+    1600,
+    1792
+  ],
+  "camera": {
+    "type": "PERSP",
+    "lens": 70.0,
+    "position": [
+      2.1922149658203125,
+      -8.24483585357666,
+      2.3760619163513184
+    ],
+    "target": [
+      0.053998589515686035,
+      -0.22652557492256165,
+      1.707869291305542
+    ]
+  },
+  "tongue_out": 0.0,
+  "transparent": true,
+  "alpha": "Native Cycles coverage; sweep hidden only from camera rays",
+  "preserved": [
+    "approved lighting",
+    "focused hazel eyes",
+    "smooth directional coat",
+    "native geometry",
+    "rig"
+  ],
+  "render_sha256": "855afe9e0f3e3ae2de6893b4c1b8253cf6bec000702e0dbc1051b50e3baa2757",
+  "denoising": true,
+  "depth_of_field": false,
+  "scene_sha256": "3db1cf8b9a52de4cce6d26bc7bcb478e105e7be723bb9775cd82f05ddd172dd6"
+}

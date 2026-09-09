@@ -1,0 +1,57 @@
+/* Origin89 Plate 89 kit v1.0. Snapshot: 2026-09-06. Product source: palette/src/palette.mjs */
+:root {
+ --brand-blue: #2b4a97;
+ --brand-ink: #07090c;
+ --brand-chalk: #e7eaee;
+ --brand-paper: #f4f3ef;
+ --font-display: "Michroma", sans-serif;
+ --font-body: "Inter Tight", sans-serif;
+ --font-data: "IBM Plex Mono", monospace;
+}
+[data-theme="light"] {
+ --o89-page: #fbfcfa;
+ --o89-surface: #f1f3f0;
+ --o89-surface-raised: #ffffff;
+ --o89-line: #dfe3e6;
+ --o89-line-strong: #c4ccd2;
+ --o89-focus: #2b4a97;
+ --o89-fg: #11161a;
+ --o89-muted: #4b5761;
+ --o89-faint: #69747d;
+ --o89-action: #2b4a97;
+ --o89-action-lit: #3f61b3;
+ --o89-link: #2b4a97;
+ --o89-on-fill: #ffffff;
+ --o89-nominal: #4c7d5f;
+ --o89-warning: #9f6601;
+ --o89-nominal-deep: #4c7d5f;
+ --o89-warning-deep: #a26405;
+ --o89-alarm: #ca4628;
+ --o89-alarm-deep: #a63b25;
+ --o89-info: #487899;
+}
+[data-theme="dark"] {
+ --o89-page: #07090c;
+ --o89-surface: #0d1116;
+ --o89-surface-raised: #12171e;
+ --o89-line: #1e252e;
+ --o89-line-strong: #2b343f;
+ --o89-focus: #ffffff;
+ --o89-fg: #e7eaee;
+ --o89-muted: #9aa5b1;
+ --o89-faint: #707b87;
+ --o89-action: #2b4a97;
+ --o89-action-lit: #3f61b3;
+ --o89-link: #6279ad;
+ --o89-on-fill: #ffffff;
+ --o89-nominal: #2f9d64;
+ --o89-warning: #e9a13c;
+ --o89-nominal-deep: #168c54;
+ --o89-warning-deep: #b1721f;
+ --o89-alarm: #e05a3c;
+ --o89-alarm-deep: #a63b25;
+ --o89-info: #7fb0d4;
+}
+
+/* Studio materials; flat brand colors above remain unchanged. */
+:root { --material-shell: #172c50; --material-ceramic: #eadfcf; --material-buddy: #594132; --material-buddy-belly: #b29879; --material-buddy-muzzle: #281c17; --material-buddy-beard: #493022; --material-buddy-hoof: #352b24; --material-buddy-antler: #927a57; }

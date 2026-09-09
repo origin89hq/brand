@@ -1,0 +1,456 @@
+{
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "passed": true,
+  "expression_frames": {
+    "neutral": 1,
+    "smile": 110,
+    "delighted": 140,
+    "surprised": 170,
+    "concerned": 200,
+    "wink": 230,
+    "blink": 260,
+    "playful": 290,
+    "tongue-peek": 350,
+    "skeptical": 320
+  },
+  "checks": {
+    "ten_distinct_expressions": {
+      "passed": true,
+      "detail": {
+        "neutral": {
+          "face_jaw_open": 0.0,
+          "face_smile": 0.0,
+          "face_lip_raise": 0.0,
+          "face_lip_lower": 0.0,
+          "face_smile_L": 0.0,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.0,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.0,
+          "face_tongue_curl": 0.0,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 0.0,
+          "face_upper_lid_L": 0.0,
+          "face_lower_lid_L": 0.0,
+          "face_brow_raise_L": 0.0,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.0,
+          "face_lower_lid_R": 0.0,
+          "face_brow_raise_R": 0.0,
+          "face_brow_tilt_R": 0.0
+        },
+        "smile": {
+          "face_jaw_open": 0.2800000011920929,
+          "face_smile": 0.8500000238418579,
+          "face_lip_raise": 0.4000000059604645,
+          "face_lip_lower": 0.4000000059604645,
+          "face_smile_L": 0.0,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.0,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.0,
+          "face_tongue_curl": 0.0,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 0.0,
+          "face_upper_lid_L": 0.0,
+          "face_lower_lid_L": 0.15000000596046448,
+          "face_brow_raise_L": 0.15000000596046448,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.0,
+          "face_lower_lid_R": 0.15000000596046448,
+          "face_brow_raise_R": 0.15000000596046448,
+          "face_brow_tilt_R": 0.0
+        },
+        "delighted": {
+          "face_jaw_open": 0.75,
+          "face_smile": 1.0,
+          "face_lip_raise": 0.6499999761581421,
+          "face_lip_lower": 0.6499999761581421,
+          "face_smile_L": 0.0,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.0,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.0,
+          "face_tongue_curl": 0.0,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 0.0,
+          "face_upper_lid_L": 0.20000000298023224,
+          "face_lower_lid_L": 0.4000000059604645,
+          "face_brow_raise_L": 0.3499999940395355,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.20000000298023224,
+          "face_lower_lid_R": 0.4000000059604645,
+          "face_brow_raise_R": 0.3499999940395355,
+          "face_brow_tilt_R": 0.0
+        },
+        "surprised": {
+          "face_jaw_open": 0.699999988079071,
+          "face_smile": 0.0,
+          "face_lip_raise": 0.3499999940395355,
+          "face_lip_lower": 0.0,
+          "face_smile_L": 0.0,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.0,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.0,
+          "face_tongue_curl": 0.0,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 0.0,
+          "face_upper_lid_L": 0.0,
+          "face_lower_lid_L": 0.0,
+          "face_brow_raise_L": 0.8500000238418579,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.0,
+          "face_lower_lid_R": 0.0,
+          "face_brow_raise_R": 0.8500000238418579,
+          "face_brow_tilt_R": 0.0
+        },
+        "concerned": {
+          "face_jaw_open": 0.0,
+          "face_smile": -0.550000011920929,
+          "face_lip_raise": 0.0,
+          "face_lip_lower": 0.0,
+          "face_smile_L": 0.0,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.0,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.0,
+          "face_tongue_curl": 0.0,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 0.0,
+          "face_upper_lid_L": 0.11999999731779099,
+          "face_lower_lid_L": 0.0,
+          "face_brow_raise_L": 0.0,
+          "face_brow_tilt_L": 0.75,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.11999999731779099,
+          "face_lower_lid_R": 0.0,
+          "face_brow_raise_R": 0.0,
+          "face_brow_tilt_R": 0.75
+        },
+        "wink": {
+          "face_jaw_open": 0.11999999731779099,
+          "face_smile": 0.6000000238418579,
+          "face_lip_raise": 0.0,
+          "face_lip_lower": 0.0,
+          "face_smile_L": 0.0,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.0,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.0,
+          "face_tongue_curl": 0.0,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 1.0,
+          "face_upper_lid_L": 0.0,
+          "face_lower_lid_L": 0.0,
+          "face_brow_raise_L": 0.0,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.0,
+          "face_lower_lid_R": 0.0,
+          "face_brow_raise_R": 0.3499999940395355,
+          "face_brow_tilt_R": -0.25
+        },
+        "blink": {
+          "face_jaw_open": 0.0,
+          "face_smile": 0.0,
+          "face_lip_raise": 0.0,
+          "face_lip_lower": 0.0,
+          "face_smile_L": 0.0,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.0,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.0,
+          "face_tongue_curl": 0.0,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 1.0,
+          "face_upper_lid_L": 0.0,
+          "face_lower_lid_L": 0.0,
+          "face_brow_raise_L": 0.0,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 1.0,
+          "face_upper_lid_R": 0.0,
+          "face_lower_lid_R": 0.0,
+          "face_brow_raise_R": 0.0,
+          "face_brow_tilt_R": 0.0
+        },
+        "playful": {
+          "face_jaw_open": 0.550000011920929,
+          "face_smile": 0.6499999761581421,
+          "face_lip_raise": 0.25,
+          "face_lip_lower": 0.3499999940395355,
+          "face_smile_L": 0.25,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.4000000059604645,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.25,
+          "face_tongue_out": 1.0,
+          "face_tongue_curl": 0.75,
+          "face_tongue_side": -0.15000000596046448,
+          "face_tongue_twist": -0.10000000149011612,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 0.0,
+          "face_upper_lid_L": 0.0,
+          "face_lower_lid_L": 0.25,
+          "face_brow_raise_L": 0.0,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.0,
+          "face_lower_lid_R": 0.20000000298023224,
+          "face_brow_raise_R": 0.25,
+          "face_brow_tilt_R": 0.0
+        },
+        "tongue-peek": {
+          "face_jaw_open": 0.47999998927116394,
+          "face_smile": 0.25,
+          "face_lip_raise": 0.0,
+          "face_lip_lower": 0.0,
+          "face_smile_L": 0.0,
+          "face_smile_R": 0.0,
+          "face_cheek_raise_L": 0.0,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.8500000238418579,
+          "face_tongue_curl": -0.25,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.15000000596046448,
+          "face_lip_press": 0.6499999761581421,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 0.0,
+          "face_upper_lid_L": 0.0,
+          "face_lower_lid_L": 0.14000000059604645,
+          "face_brow_raise_L": 0.11999999731779099,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.0,
+          "face_lower_lid_R": 0.18000000715255737,
+          "face_brow_raise_R": 0.20000000298023224,
+          "face_brow_tilt_R": 0.0
+        },
+        "skeptical": {
+          "face_jaw_open": 0.0,
+          "face_smile": 0.0,
+          "face_lip_raise": 0.0,
+          "face_lip_lower": 0.0,
+          "face_smile_L": 0.6499999761581421,
+          "face_smile_R": -0.30000001192092896,
+          "face_cheek_raise_L": 0.3499999940395355,
+          "face_cheek_raise_R": 0.0,
+          "face_muzzle_scrunch": 0.0,
+          "face_tongue_out": 0.0,
+          "face_tongue_curl": 0.0,
+          "face_tongue_side": 0.0,
+          "face_tongue_twist": 0.0,
+          "face_tongue_widen": 0.0,
+          "face_lip_press": 0.0,
+          "face_lip_pucker": 0.0,
+          "face_blink_L": 0.0,
+          "face_upper_lid_L": 0.0,
+          "face_lower_lid_L": 0.0,
+          "face_brow_raise_L": 0.550000011920929,
+          "face_brow_tilt_L": 0.0,
+          "face_blink_R": 0.0,
+          "face_upper_lid_R": 0.41999998688697815,
+          "face_lower_lid_R": 0.0,
+          "face_brow_raise_R": 0.0,
+          "face_brow_tilt_R": -0.5
+        }
+      }
+    },
+    "jaw_driver_moves_mandible": {
+      "passed": true,
+      "detail": {
+        "neutral": 0.0,
+        "smile": 0.13439999520778656,
+        "delighted": 0.36000001430511475,
+        "surprised": 0.335999995470047,
+        "concerned": 0.0,
+        "wink": 0.0575999990105629,
+        "blink": 0.0,
+        "playful": 0.2639999985694885,
+        "tongue-peek": 0.2303999960422516,
+        "skeptical": 0.0
+      }
+    },
+    "rigid_teeth_follow_jaw": {
+      "passed": true,
+      "detail": {
+        "max_local_drift": 3.8743019104003906e-07
+      }
+    },
+    "teeth_follow_mandibular_arch": {
+      "passed": true,
+      "detail": {
+        "maximum_root_error": 5.057621821307283e-07,
+        "arch_depth": 0.060151517391204834,
+        "teeth": 8
+      }
+    },
+    "eyelid_faces_clear_cornea": {
+      "passed": true,
+      "detail": {
+        "sampled_faces": 6600,
+        "minimum_clearance": 0.0014001968056618352
+      }
+    },
+    "valid_facial_drivers": {
+      "passed": true,
+      "detail": 46
+    },
+    "closed_lids_cover_eyes": {
+      "passed": true,
+      "detail": {
+        "neutral": {
+          "L": 0.0,
+          "R": 0.0
+        },
+        "wink": {
+          "L": 1.0,
+          "R": 0.0
+        },
+        "blink": {
+          "L": 1.0,
+          "R": 1.0
+        }
+      }
+    },
+    "independent_wink": {
+      "passed": true,
+      "detail": {
+        "L": 1.0,
+        "R": 0.0
+      }
+    },
+    "open_eyes_unobscured": {
+      "passed": true,
+      "detail": {
+        "L": 0.0,
+        "R": 0.0
+      }
+    },
+    "teeth_concealed_when_closed": {
+      "passed": true,
+      "detail": {
+        "front": {},
+        "three_quarter": {},
+        "side": {}
+      }
+    },
+    "teeth_revealed_in_smile": {
+      "passed": true,
+      "detail": {
+        "smile": 70,
+        "delighted": 192
+      }
+    },
+    "independent_brow_and_lip_deformation": {
+      "passed": true,
+      "detail": {
+        "Face | eyebrow L": 0.09574085474014282,
+        "Face | eyebrow R": 0.0,
+        "Skin | long moose head and integrated muzzle": 0.08498251438140869,
+        "Skin | lower jaw and closing lip": 0.0
+      }
+    },
+    "lower_lip_keeps_thickness": {
+      "passed": true,
+      "detail": {
+        "sampled_sections": 20,
+        "minimum_thickness_ratio": 1.0
+      }
+    },
+    "facial_hair_follows_surface": {
+      "passed": true,
+      "detail": {
+        "sampled_roots": 594,
+        "max_surface_distance": 0.00013298183330334723,
+        "brow_hair_travel": 0.08101211488246918
+      }
+    },
+    "eyelashes_follow_independent_lids": {
+      "passed": true,
+      "detail": {
+        "sampled_roots": 24,
+        "maximum_surface_distance": 3.1680303891334916e-07,
+        "wink_travel": {
+          "L": 0.11042366176843643,
+          "R": 0.0
+        }
+      }
+    },
+    "independent_flexible_tongue": {
+      "passed": true,
+      "detail": {
+        "out": 0.6523227691650391,
+        "curl": 0.30463093519210815,
+        "side": 0.1600000113248825,
+        "twist": 0.042513128370046616,
+        "widen": 0.021532699465751648
+      }
+    },
+    "beard_stays_below_mouth": {
+      "passed": true,
+      "detail": {
+        "sampled_hair_points": 13232,
+        "intrusions": []
+      }
+    },
+    "extended_tongue_clears_muzzle": {
+      "passed": true,
+      "detail": {
+        "playful": 0.002699465150499236,
+        "tongue-peek": 0.010843637109370953
+      }
+    },
+    "combined_pose_survives_frame_evaluation": {
+      "passed": true,
+      "detail": {
+        "raised_arm_matrix_error": 5.960464477539063e-08,
+        "smile_control_error": 0.0
+      }
+    }
+  },
+  "scope": "Sampled expression deformation and visibility; not a speech rig or validated facial muscle simulation."
+}

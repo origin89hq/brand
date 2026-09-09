@@ -1,0 +1,22 @@
+{
+  "schema": 2,
+  "character": "Buddy",
+  "species": "moose",
+  "palette": "brown",
+  "source": "buddy/blender/buddy.blend",
+  "scene": "Buddy | layered character",
+  "rig": "Buddy | pose rig",
+  "modules": "buddy/blender",
+  "review": "buddy/manifest.json",
+  "validation": [
+    "buddy/validation.json",
+    "buddy/facial-validation.json"
+  ],
+  "situations": "situations/scenes",
+  "website_avatar": "buddy/presentation/portrait-transparent.png",
+  "small_avatar": "buddy/avatar/buddy-welcoming.png",
+  "avatar_builder": "buddy/avatar/build_avatar.py",
+  "website_expressions": "buddy/presentation",
+  "website_studio": "buddy/presentation/studio-transparent.png",
+  "avatar_scene": "buddy/presentation/face-front.png"
+}

@@ -1,4 +1,6 @@
-# Rendered guides and archives are not reviewable text.
+# Editable artwork stays available without large Blender blobs in Git history.
+*.blend filter=lfs diff=lfs merge=lfs -text
+# Rendered guides and binaries are not reviewable text.
 *.pdf binary
 *.ico binary
 *.ttf binary

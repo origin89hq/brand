@@ -1,3 +1,16 @@
 node_modules/
+dist/
 *.tgz
+*.zip
 .DS_Store
+# Native build scratch and interpreter caches are not brand deliverables.
+.build/
+__pycache__/
+*.pyc
+*.blend1
+*.blend2
+# Scene variants that buddy.py presentation writes from buddy/blender/buddy.blend and reads back for the other expressions.
+buddy/presentation/portrait.blend
+buddy/presentation/portrait-transparent.blend
+buddy/presentation/studio.blend
+buddy/presentation/studio-transparent.blend

@@ -39,6 +39,7 @@
   "scripts": {
     "build": "node palette/build.mjs && node build.mjs",
     "verify": "node palette/verify.mjs && node verify.mjs",
-    "check": "npm run build && npm run verify"
+    "check": "npm run build && npm run verify && npm run kit",
+    "kit": "node kit.mjs"
   }
 }

@@ -1,0 +1,95 @@
+{
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "recipe_sha256": "beb3732a36352a9a4368136bafebab88c69158bdb1b2adbd6b949bfea15fe455",
+  "construction": "Front-facing native alpha renders composited on green, shown in a circle at small sizes.",
+  "background": "#3d5749",
+  "crop_normalized": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "expressions": [
+    "welcoming",
+    "explaining",
+    "thinking",
+    "delighted",
+    "concerned",
+    "surprised",
+    "playful"
+  ],
+  "inputs": {
+    "welcoming": {
+      "path": "buddy/presentation/face-front.png",
+      "sha256": "dea3fe5327a5ba2a4dcad956f1aacd7d6474303a7ab49516fde0bbfccf7d4dda"
+    },
+    "explaining": {
+      "path": "buddy/presentation/face-front-explaining.png",
+      "sha256": "62af6990099d417f9e9bc589cbc187a9eaf231241067f9cb8425c76eaf31071e"
+    },
+    "thinking": {
+      "path": "buddy/presentation/face-front-thinking.png",
+      "sha256": "4112c29e6e13b5f7ff25321406de5ea6442b8105ac2a94c8f9d9df7158eaf081"
+    },
+    "delighted": {
+      "path": "buddy/presentation/face-front-delighted.png",
+      "sha256": "ff43c8b52354b2713a7711a8f112f7338a2bb4364c2f010b16935f847131aa1c"
+    },
+    "concerned": {
+      "path": "buddy/presentation/face-front-concerned.png",
+      "sha256": "1970996f27606abb02e92326983c860da3e631ad9ef4e7f9099156a73f0fa8d1"
+    },
+    "surprised": {
+      "path": "buddy/presentation/face-front-surprised.png",
+      "sha256": "9bdc836b53aad8070a8202273ea2fde89390b6f9054de43da19a7c0d7e8f5bfc"
+    },
+    "playful": {
+      "path": "buddy/presentation/face-front-playful.png",
+      "sha256": "8f369ba59af00002e2afaaa5b4c817abc7491e1c1ef46f9ec9ce8fd5893d258f"
+    }
+  },
+  "files": {
+    "buddy-concerned-192.webp": "e48b8f7a7e4681c87bfd6c0f352d4d8fbd0e162f8482c4f45d51bc9b446ead4a",
+    "buddy-concerned-384.webp": "54419d47132e588dc6eb8c7174f9a59d13fa1cf2a30aea863f11b2f9269e9d57",
+    "buddy-concerned-48.webp": "b4f1afe37188e9eb104f5b7a02d221c8f4ebcf968a413959aee62d52842f3d8f",
+    "buddy-concerned-96.webp": "0193da8cf14a9ae8639d4b8a9277f6fef730377f5398a0e6bd9a89c7ab3ec378",
+    "buddy-concerned-round.png": "8e173b1b7a399b7d9e5d2e1195b2c0e4fa2e2e85f42727389a8957234e2b47c3",
+    "buddy-concerned.png": "eaad4f8aded19c745adce4403dbcfc1ba909c474d1a3c712f70f07faff052415",
+    "buddy-delighted-192.webp": "46496de5df1c1abf3f70c0b9c2f2b0abaa582df1db40422c9f58a4e21e6b67e8",
+    "buddy-delighted-384.webp": "a1596be44a2832c48d7a6178f2ab9abe847600165c4d90d66d077703d2b6564a",
+    "buddy-delighted-48.webp": "4f8d0090b681c97697e40bc415be0ac6f1c04b5a42aad1b64d2caae99f5af187",
+    "buddy-delighted-96.webp": "f23e23bb3b0fc82535aee9f75f9496ccbed7edbd8353b32e1b90a5ad8936ec4f",
+    "buddy-delighted-round.png": "0b024ad2a82d32f93872cc32d0349cdc8af128bcdd26bd9196f9c386846286ce",
+    "buddy-delighted.png": "33dc3e93c50914737a0ccd52705fd64316e481e63470280cbd6b07c4a0a4dbfe",
+    "buddy-explaining-192.webp": "998bc11bf58e0beb44c4e244e0a474b896726d91673e1ebfd0c6a76a383876ab",
+    "buddy-explaining-384.webp": "30a4f9fc8405514f876b5066501ca4c59239716966680363fa3a4d7e22109c06",
+    "buddy-explaining-48.webp": "aed8a601b80be46ea01bd457197f7047eb191086f151365cbeb26519c2abe676",
+    "buddy-explaining-96.webp": "5190564070ea95dcc63863c5b461038e4fec1c1b229de424609cedbde7c65753",
+    "buddy-explaining-round.png": "59022ea1b03217ea92fe892dadf090f66a368ab085777677b3b8785bc05749c3",
+    "buddy-explaining.png": "093e31798fb1df6bf5e089f0f6b8d3c56d8ed4d2712b35dcc17e782ed98484f3",
+    "buddy-playful-192.webp": "2d79ba1b34481a24bd4f2ab9ea331d9d00ed12477403173e75e5cd06fc88cb8f",
+    "buddy-playful-384.webp": "44ee0196b4070c7acd03d5e4ab5777e880cf6ef0037adc8632090390067e45d7",
+    "buddy-playful-48.webp": "a25e4baf9799712a445bef32920128e21ff4e0b46a217f5ed310862768c7bd71",
+    "buddy-playful-96.webp": "18091f547178c7af1c4661e0a361d76a0fcacd688383651838c861cdf32c8886",
+    "buddy-playful-round.png": "a2418f376c1ee18bfac4186892a395fb38f3f51f78d35bddbd7e34cbdb6b520e",
+    "buddy-playful.png": "ab18d96e40734936dae8aae972c1b93ccb70347f88db2cd43b0e5201caa68c25",
+    "buddy-surprised-192.webp": "11e08f4656214494a4a3e8e07c0fd4c0508c4fb3cbd2fb03d801b1c9fd57ae31",
+    "buddy-surprised-384.webp": "df25046730e4f3d736b23bf79f9ae4a5f6a71bfeca9da3b854e8540227e1adab",
+    "buddy-surprised-48.webp": "b265d444e34c7628b1e6403540cbf1bb46887dd0b949be6c058df4cc01b40c02",
+    "buddy-surprised-96.webp": "e1077a2ed3ed98ef09c51a6e5fcd0ccda8cf27390b170fd6a2500c20a5149bf3",
+    "buddy-surprised-round.png": "a791bee6fca2009a7945153a973fcc7116e4b059abc4d4cb4f8f31ba988a4fdb",
+    "buddy-surprised.png": "45a3fbd1bd6200f98240f060948d45a6b787ea28172996380831fcde6b06693a",
+    "buddy-thinking-192.webp": "5a8b7311ab46ff1687ac1a4ddb71071dd2fe62367a9088bf7f354996349e15d3",
+    "buddy-thinking-384.webp": "8093f56403bfe5ac4bb80612e048b9621e2f1fd07ace506dcaab1e8552fc491b",
+    "buddy-thinking-48.webp": "93cc0f51695b26010b5ab53ebc8f5c612ed4c7a71eb5087506e48550d4593500",
+    "buddy-thinking-96.webp": "eb88e01aa64339800baa87f34fe38e02af15f7f3059e2da5861ce4278fe596a9",
+    "buddy-thinking-round.png": "acd6121ae260651d853dc192670c591851dff027c6ac1fb78c22fb2308bf3e57",
+    "buddy-thinking.png": "f66a4c313a6f0667159781bf01adb161e664302fbb7c418f9006f2b9d2b6eb4c",
+    "buddy-welcoming-192.webp": "823805b142d2fefea26424b32338e9083fee6582df077ba0871de3b8afd01135",
+    "buddy-welcoming-384.webp": "fe7cf4706756cc3b24942fd4692e406847cef7bc06147c18f176761c98dc9f3e",
+    "buddy-welcoming-48.webp": "5e206eed309ea93052728761cb04724edf6688d7154f841798da0d30623a66ab",
+    "buddy-welcoming-96.webp": "2762d71d383a79538efc14cc8b3ed437a84937f16c7679e981657dbb67190583",
+    "buddy-welcoming-round.png": "5f39f2b927c6dc6202b3e86336e0e97f5a9e26c7e142cfdc23730a993cc25810",
+    "buddy-welcoming.png": "919cb8a59e1cdc81e2efb824005f8ab0c3fc429e152a7384fe50448aded082cb"
+  }
+}

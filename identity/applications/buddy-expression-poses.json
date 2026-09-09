@@ -1,0 +1,12 @@
+{
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "composition": "source/build_expression_board.py",
+  "source_renders": [
+    "../buddy/presentation/portrait-transparent.png",
+    "../buddy/presentation/portrait-explaining-transparent.png",
+    "../buddy/presentation/portrait-thinking-transparent.png",
+    "../buddy/presentation/portrait-delighted-transparent.png",
+    "../buddy/presentation/portrait-concerned-transparent.png",
+    "../buddy/presentation/portrait-surprised-transparent.png"
+  ]
+}

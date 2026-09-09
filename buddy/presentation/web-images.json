@@ -1,0 +1,258 @@
+{
+  "portrait-640.webp": {
+    "bytes": 34884,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "ee77426968cae1072490951b3dc7c6300d38428781aa964c2a9d312d82ea3107"
+  },
+  "portrait-1280.webp": {
+    "bytes": 130590,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "aca7938843f2de74d56610ab8f8ce2ec1d5b7b9aa35702048fa15e599a0b196a"
+  },
+  "portrait-transparent-640.webp": {
+    "bytes": 64726,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "1cb367a57076dd409a58bcb26f5aa1d01b7e2ffd8a3990d22331bc34d2dc7c76"
+  },
+  "portrait-transparent-1280.webp": {
+    "bytes": 214078,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "cb4b30d2ebf0bca9e6de4254a6ab9f20e0a5644b7222beccd3d3c022d888c9a7"
+  },
+  "portrait-explaining-640.webp": {
+    "bytes": 35020,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "5952eb202a795c5d35a4558dde884553d24391d46748f9fd43ec6d017758e795"
+  },
+  "portrait-explaining-1280.webp": {
+    "bytes": 133208,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "d9d41b611ea0ed1a16717143986e73cb53434bd33d0743ded71ed141c1670e34"
+  },
+  "portrait-explaining-transparent-640.webp": {
+    "bytes": 69230,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "d3407d9b9f34521870f4c9dc8b1cd289fca57560c4cfe38347967369ca8043e3"
+  },
+  "portrait-explaining-transparent-1280.webp": {
+    "bytes": 225200,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "4dc53135f7fe29e3694d0471a5060fb8344b632fca16770ebb70f0d21ab3c724"
+  },
+  "portrait-thinking-640.webp": {
+    "bytes": 34604,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "d2b91624925ca8e2894c6fbcf0c230b0a75757598eaef41edfb758ebad30d396"
+  },
+  "portrait-thinking-1280.webp": {
+    "bytes": 131088,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "2eee3ac95dca2f495651ad12b05cd7cb0764c8d79057ca1c904f4a2f7331a792"
+  },
+  "portrait-thinking-transparent-640.webp": {
+    "bytes": 64654,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "4215c292078e679664c7a5e5c48734ba8c3efceda82279ac9cc5335fe503210f"
+  },
+  "portrait-thinking-transparent-1280.webp": {
+    "bytes": 214062,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "d027425f172dfd17714cace86cc4db239a99f49b1c6aa1c6eea2c879b4aa8561"
+  },
+  "portrait-delighted-640.webp": {
+    "bytes": 35126,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "fa264b9372e28f3a3e893fc927b9f4828f67d9f446e956d3cbdbb2d8ab77263c"
+  },
+  "portrait-delighted-1280.webp": {
+    "bytes": 131564,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "d75680780326b49aeea83689dfea1c9fb4ced1ae5b02dd1237a8725e61075dbb"
+  },
+  "portrait-delighted-transparent-640.webp": {
+    "bytes": 65580,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "16ef2c5e17dc6deb5a53cd8bdc42b934b0bfac10ba596913b3e2c02cfc262f97"
+  },
+  "portrait-delighted-transparent-1280.webp": {
+    "bytes": 215282,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "93fe9a25b78e2852995563108f533ddd14d7dd7eacfe01c9eb79c6cbfd8d4705"
+  },
+  "portrait-concerned-640.webp": {
+    "bytes": 34840,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "3ed0b25b15fa99f633ca9b073d031c789e90d584d1f78d403bf33eabd6f5671d"
+  },
+  "portrait-concerned-1280.webp": {
+    "bytes": 131848,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "5160f73d8dfd4977007e5e9fae70a3362e6a498a2d302b5ccbd8251ba5d383d3"
+  },
+  "portrait-concerned-transparent-640.webp": {
+    "bytes": 64506,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "ad27403961206fb043222959f818fb549d8fd1ae8c50959b376549b1067761d1"
+  },
+  "portrait-concerned-transparent-1280.webp": {
+    "bytes": 214610,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "8d4822767094ea4e8d74485f39542f7d350f70140f144e0ec4152a37f410766a"
+  },
+  "portrait-surprised-640.webp": {
+    "bytes": 35588,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "30baaa1720a0464b5b5b60c30dda8d45b30f3fea6b8908ee6e6dc0ec07b40bf5"
+  },
+  "portrait-surprised-1280.webp": {
+    "bytes": 131578,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "4468ac5c4f0a65a29c59b41a6c52ce073fbabed012adda4ceba8a876d41a623e"
+  },
+  "portrait-surprised-transparent-640.webp": {
+    "bytes": 65822,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "13550f72fddd2ac2072295e12ec49afc51c88cd215fe50cc8d55d3fc9dae4a6e"
+  },
+  "portrait-surprised-transparent-1280.webp": {
+    "bytes": 214834,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "1ad5b892769396a8130f47294c2f497f7877087e0ddd05b8a7317f691cdf1e8a"
+  },
+  "portrait-playful-640.webp": {
+    "bytes": 35418,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "f51ad287e5d5514310ca56d85fbf26dc1c6c925b7b49e20be16b6ae11d8a3575"
+  },
+  "portrait-playful-1280.webp": {
+    "bytes": 131000,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "85ec92b9c733939e4ab28611d22b04968f17a5153d87fdb647c5058a3ca90dea"
+  },
+  "portrait-playful-transparent-640.webp": {
+    "bytes": 64666,
+    "size": [
+      640,
+      640
+    ],
+    "sha256": "f436772dd71063b938b87d435d0ef90178010acc496420914f31b96cb5df9a37"
+  },
+  "portrait-playful-transparent-1280.webp": {
+    "bytes": 213330,
+    "size": [
+      1280,
+      1280
+    ],
+    "sha256": "e2ec17c929ee97bde0448f0824bc1711c604465151f4ce85e15fb6326915b3c8"
+  },
+  "studio-640.webp": {
+    "bytes": 16826,
+    "size": [
+      640,
+      717
+    ],
+    "sha256": "40bfe44d0ed656f99ae26932953aeecd0019087b2134d1c5c6ded9968312e22e"
+  },
+  "studio-1280.webp": {
+    "bytes": 49538,
+    "size": [
+      1280,
+      1434
+    ],
+    "sha256": "056aa060675b3d0d75035d708ec0f46a55103652699a3c13dfa3b0d5826dafc7"
+  },
+  "studio-transparent-640.webp": {
+    "bytes": 41184,
+    "size": [
+      640,
+      717
+    ],
+    "sha256": "ee263489297cc9ff83a5168bd86c7577e2d2bc445d2c806528209d4853f65d67"
+  },
+  "studio-transparent-1280.webp": {
+    "bytes": 113926,
+    "size": [
+      1280,
+      1434
+    ],
+    "sha256": "2facac9a44b629e46edacfb4a4855613b00b5c23e85eca6622a225bf4bdc50a8"
+  }
+}

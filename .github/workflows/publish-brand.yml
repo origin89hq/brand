@@ -34,3 +34,23 @@ jobs:
       - run: npm run check
       - run: git diff --exit-code
       - run: npm publish --access public
+
+  # The downloadable kit rides on the same tag as a release asset, so the website
+  # links releases/latest/download/origin89-brand-kit.zip and never changes the URL.
+  release:
+    needs: publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+      - run: npm run build && npm run kit
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${GITHUB_REF_NAME}" dist/origin89-brand-kit.zip --title "brand ${GITHUB_REF_NAME#brand-v}" --notes "Brand kit ${GITHUB_REF_NAME#brand-v}: logos as SVG and PNG, icons, fonts with their OFL files, the colour tokens and the design guide. Terms in LICENSE.md inside the archive. The npm package @origin89/brand@${GITHUB_REF_NAME#brand-v} carries the same identity for code."

@@ -1,0 +1,42 @@
+{
+  "base": "buddy/blender/buddy.blend",
+  "source_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "recipe_sha256": "94ac9b618428c39eed346e716580c3a9c00f2c7477b0da9616102c7a3d404784",
+  "scene_source": "buddy/presentation/portrait.blend",
+  "scene_source_sha256": "009d5e0c1135161bad4e4d8e62c65da7128ad8bc5318f59d917d9a21ab63b856",
+  "look": "portrait",
+  "expression": "thinking",
+  "frame": 320,
+  "samples": 256,
+  "size": [
+    1920,
+    1920
+  ],
+  "camera": {
+    "type": "PERSP",
+    "lens": 85.0,
+    "position": [
+      1.4255986213684082,
+      -4.922281742095947,
+      2.071828603744507
+    ],
+    "target": [
+      0.0,
+      -0.3400000035762787,
+      1.9700000286102295
+    ]
+  },
+  "tongue_out": 0.0,
+  "transparent": true,
+  "alpha": "Native Cycles coverage; sweep hidden only from camera rays",
+  "preserved": [
+    "approved lighting",
+    "focused hazel eyes",
+    "smooth directional coat",
+    "native geometry",
+    "rig"
+  ],
+  "render_sha256": "4d6b8f84efd8e5b7cada7480a26d186b11d48a8a1012d7ec6e5d132e3e831ba6",
+  "denoising": true,
+  "depth_of_field": false
+}

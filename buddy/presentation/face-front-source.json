@@ -1,0 +1,6 @@
+{
+  "base": "buddy/blender/buddy.blend",
+  "base_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "scene": "face-front.blend",
+  "role": "Editable avatar source. Rendering reads this scene without saving it."
+}
