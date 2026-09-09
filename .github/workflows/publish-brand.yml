@@ -1,6 +1,8 @@
-# Publishes @origin89/brand to npm from a tag, with provenance, through npm's
-# trusted publishing: the job presents a GitHub OIDC token and npm checks it
-# against the publisher configured on the package, so no npm token is stored.
+# Publishes @origin89/brand to npm from a brand-v* tag through npm trusted
+# publishing: the job presents a GitHub OIDC token and npm checks it against the
+# publisher configured on the package. No npm token is stored. Provenance is
+# off until the repository is public; the registry refuses a provenance bundle
+# from a private source repository.
 name: publish-brand
 
 on:
