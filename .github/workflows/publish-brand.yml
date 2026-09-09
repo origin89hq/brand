@@ -53,4 +53,8 @@ jobs:
       - run: npm run build && npm run kit
       - env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${GITHUB_REF_NAME}" dist/origin89-brand-kit.zip --title "brand ${GITHUB_REF_NAME#brand-v}" --notes "Brand kit ${GITHUB_REF_NAME#brand-v}: logos as SVG and PNG, icons, fonts with their OFL files, the colour tokens and the design guide. Terms in LICENSE.md inside the archive. The npm package @origin89/brand@${GITHUB_REF_NAME#brand-v} carries the same identity for code."
+        run: |
+          version="${GITHUB_REF_NAME#brand-v}"
+          gh release create "${GITHUB_REF_NAME}" dist/origin89-brand-kit.zip \
+            --title "brand ${version}" \
+            --notes "Brand kit ${version}. Logos as SVG and PNG, icons, fonts with their OFL files, the colour tokens and the design guide; terms in LICENSE.md inside the archive. The npm package @origin89/brand@${version} carries the same identity for code."
