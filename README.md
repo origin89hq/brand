@@ -39,12 +39,14 @@ Files are addressed by their path in the manifest:
 difference from what is committed, and builds the kit zip. CI runs it on every
 push.
 
-Blender files travel through Git LFS: the character, its face scene, the plate
-studio, the reserve scene and the equipment scout. Clone with
+Authored Blender files travel through Git LFS: the character, its face scene,
+the plate studio and the reserve scene. Clone with
 `GIT_LFS_SKIP_SMUDGE=1` unless you are editing them; CI never fetches them.
 The four scene variants under `buddy/presentation/` are written by
 `python3 source/buddy.py presentation` from the character and are not
-committed.
+committed. The equipment scout's `situations/scenes/equipment-scout/scene.blend`
+is also generated locally and ignored. Its build script, render metadata, PNG
+and packaged WebP stay in Git; see its [rebuild instructions](situations/scenes/equipment-scout/README.md).
 
 ## The kit
 

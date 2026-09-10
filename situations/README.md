@@ -10,12 +10,13 @@ This creates `situations/scenes/reserve/scene.blend` and a source record. Add th
 
 ## Equipment scout
 
-[Data page preview](scenes/equipment-scout/index.html) · [Editable scene](scenes/equipment-scout/scene.blend) · [Rebuild instructions](scenes/equipment-scout/README.md)
+[Data page preview](scenes/equipment-scout/index.html) · [Rebuild the editable scene](scenes/equipment-scout/README.md)
 
 Buddy holds lowered blue binoculars and looks back toward the visitor. The
 native scene includes the binoculars, a neck strap, and optional grass details.
 `source/build_equipment_scout.py` builds it from the shared character and
-approved presentation scene. The package exports
+approved presentation scene. The generated `scene.blend` is ignored by Git;
+the recipe, render metadata and image exports are tracked. The package exports
 `art/buddy-equipment-scout-transparent.webp`.
 
 ## Reserve
