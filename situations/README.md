@@ -3,10 +3,21 @@
 Create each situation from [Buddy](../buddy/blender/buddy.blend):
 
 ```sh
-python3 docs/brand/source/buddy.py new-scene reserve
+python3 source/buddy.py new-scene reserve
 ```
 
-This creates `scenes/reserve/scene.blend` and a source record. Add the pose, props, camera and lighting there. Keep shared character geometry, fur and rig changes in the Buddy base.
+This creates `situations/scenes/reserve/scene.blend` and a source record. Add the pose, props, camera and lighting there. Keep shared character geometry, fur and rig changes in the Buddy base.
+
+## Equipment scout
+
+[Data page preview](scenes/equipment-scout/index.html) · [Rebuild the editable scene](scenes/equipment-scout/README.md)
+
+Buddy holds lowered blue binoculars and looks back toward the visitor. The
+native scene includes the binoculars, a neck strap, and optional grass details.
+`source/build_equipment_scout.py` builds it from the shared character and
+approved presentation scene. The generated `scene.blend` is ignored by Git;
+the recipe, render metadata and image exports are tracked. The package exports
+`art/buddy-equipment-scout-transparent.webp`.
 
 ## Reserve
 

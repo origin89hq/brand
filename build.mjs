@@ -40,6 +40,9 @@ for (const [dir, pairs] of Object.entries(copies)) {
 // webp because the same set as PNG is 31 MB rather than 3.
 const expressions = ["welcoming", "explaining", "thinking", "delighted", "concerned", "surprised", "playful"];
 const stem = (e) => (e === "welcoming" ? "portrait" : `portrait-${e}`);
+const situations = [
+  ["situations/scenes/equipment-scout/buddy-equipment-scout.png", "art/buddy-equipment-scout-transparent.webp", 1280],
+];
 const art = [
   ...expressions.flatMap((e) => [
     [`buddy/presentation/${stem(e)}.png`, `art/portrait-${e}.webp`, 1280],
@@ -48,6 +51,7 @@ const art = [
   ]),
   ["buddy/avatar/buddy-welcoming-round.png", "art/avatar-round.webp", 384],
   ["buddy/presentation/studio-transparent.png", "art/studio-transparent.webp", 1280],
+  ...situations,
 ];
 rmSync(join(out, "art"), { recursive: true, force: true });
 mkdirSync(join(out, "art"), { recursive: true });
@@ -60,7 +64,7 @@ for (const [from, to, width] of art) {
   shipped.art.push(to);
   manifest.art.push({ file: to, bytes: statSync(join(out, to)).size, sha256: sha256(join(out, to)), source: from });
 }
-if (shipped.art.length !== expressions.length * 3 + 2) throw new Error("Buddy art set is incomplete");
+if (shipped.art.length !== expressions.length * 3 + 2 + situations.length) throw new Error("Buddy art set is incomplete");
 
 const palette = JSON.parse(readFileSync(join(here, "identity/tokens/brand-tokens.json"), "utf8"));
 const typography = {

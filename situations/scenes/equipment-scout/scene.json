@@ -1,0 +1,70 @@
+{
+  "name": "Buddy equipment scout",
+  "base": "buddy/blender/buddy.blend",
+  "base_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "presentation_source": "buddy/presentation/face-front.blend",
+  "presentation_sha256": "7fca50a8acf8a4e9cd8fa562a4956efbefa5ca5942a3ea42586dc2914062cb10",
+  "recipe": "situations/source/build_equipment_scout.py",
+  "recipe_sha256": "6d2e14772aac16b2747346b85edb34d568f204ea1929be2037ffe42195ddc648",
+  "palette_source": "identity/tokens/brand-tokens.json",
+  "palette_sha256": "a10e602807d958aa4bac93188539138ebbcde05544ac421d66019d545f4e6125",
+  "source": "scene.blend",
+  "scene_sha256": "d6559f0fedd48bf2a3399fadbb7ec7ae7585038e0cb3d68dab71a173c786f4b3",
+  "render": "buddy-equipment-scout.png",
+  "render_sha256": "91b565ca8dc48e4363372b19929d6633f8f01b5d084c15e6f7bf205b8d520542",
+  "native_blender_render": true,
+  "transparent": true,
+  "static_pose": true,
+  "size": [
+    1600,
+    1600
+  ],
+  "samples": 192,
+  "denoising": true,
+  "camera": {
+    "position": [
+      -2.2135403156280518,
+      -9.325982093811035,
+      2.763986587524414
+    ],
+    "target": [
+      0.0,
+      -0.05999999865889549,
+      1.5800000429153442
+    ],
+    "lens": 70.0
+  },
+  "checks": {
+    "character_inputs_unchanged": true,
+    "framing": true,
+    "arm_lengths_preserved": true
+  },
+  "controls": {
+    "face_jaw_open": 0.025,
+    "face_smile": 0.48,
+    "face_lip_raise": 0.22,
+    "face_lip_lower": 0.18,
+    "face_smile_L": 0.0,
+    "face_smile_R": 0.0,
+    "face_cheek_raise_L": 0.12,
+    "face_cheek_raise_R": 0.12,
+    "face_muzzle_scrunch": 0.0,
+    "face_tongue_out": 0.0,
+    "face_tongue_curl": 0.0,
+    "face_tongue_side": 0.0,
+    "face_tongue_twist": 0.0,
+    "face_tongue_widen": 0.0,
+    "face_lip_press": 0.0,
+    "face_lip_pucker": 0.0,
+    "face_blink_L": 0.0,
+    "face_upper_lid_L": 0.02,
+    "face_lower_lid_L": 0.09,
+    "face_brow_raise_L": 0.13,
+    "face_brow_tilt_L": 0.0,
+    "face_blink_R": 0.0,
+    "face_upper_lid_R": 0.02,
+    "face_lower_lid_R": 0.12,
+    "face_brow_raise_R": 0.22,
+    "face_brow_tilt_R": 0.0
+  }
+}

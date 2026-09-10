@@ -159,7 +159,8 @@
       "art/portrait-playful-transparent.webp",
       "art/avatar-playful.webp",
       "art/avatar-round.webp",
-      "art/studio-transparent.webp"
+      "art/studio-transparent.webp",
+      "art/buddy-equipment-scout-transparent.webp"
     ]
   },
   "icons": {
@@ -553,6 +554,12 @@
         "bytes": 135606,
         "sha256": "b0a4cee2f505050562de5511d98f1ff453bf11042cd540ac7e83077525ea548e",
         "source": "buddy/presentation/studio-transparent.png"
+      },
+      {
+        "file": "art/buddy-equipment-scout-transparent.webp",
+        "bytes": 92568,
+        "sha256": "9fa6d15cd70e8802687b82ded0ebb392574b5146f01d07e91726d38601f39db2",
+        "source": "situations/scenes/equipment-scout/buddy-equipment-scout.png"
       }
     ]
   },
