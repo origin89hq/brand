@@ -28,7 +28,6 @@
       "**/*.js",
       "package.json",
       "biome.json",
-      "identity/source/package.json",
       "!**/node_modules",
       "!**/.origin89",
       "!**/.agents",
