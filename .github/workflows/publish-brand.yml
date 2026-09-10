@@ -1,75 +1,149 @@
-# Publishes @origin89/brand to npm from a brand-v* tag through npm trusted
-# publishing: the job presents a GitHub OIDC token and npm checks it against the
-# publisher configured on the package, and the publish carries a sigstore
-# provenance attestation that names this repository and workflow. No npm
-# token is stored.
+# Keep this filename: npm's trusted publisher is bound to publish-brand.yml.
+# Changesets owns version PRs, changelogs, npm publication, and version tags.
 name: publish-brand
 
 on:
   push:
-    tags:
-      - "brand-v*"
+    branches: [main]
+  workflow_dispatch:
 
-permissions:
-  contents: read
-  id-token: write
+permissions: {}
+
+concurrency:
+  group: brand-release
+  cancel-in-progress: false
 
 jobs:
-  publish:
+  select-mode:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: read
+    outputs:
+      mode: ${{ steps.mode.outputs.mode }}
+      publish-plan-artifact-id: ${{ steps.mode.outputs.publish-plan-artifact-id }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: 24
-          registry-url: https://registry.npmjs.org
-      # The tag must name the version the package declares, or the publish is a lie about what moved.
-      - name: Check the tag against package.json
-        run: |
-          version=$(node -p "require('./package.json').version")
-          test "${GITHUB_REF_NAME}" = "brand-v${version}" || { echo "tag ${GITHUB_REF_NAME} is not brand-v${version}"; exit 1; }
+          package-manager-cache: false
       - uses: pnpm/action-setup@f520eceda224fe1a4aed5a2a27a194379a409996 # v6
         with:
           run_install: false
-      # `sharp` renders Buddy for `art/`; without it `build.mjs` cannot run and
-      # the check that compares the committed outputs to a fresh build compares
-      # nothing.
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm check
-      - run: git diff --exit-code
-      # npm, not pnpm: trusted publishing checks the OIDC token npm presents.
-      - run: npm publish --provenance --access public
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - id: mode
+        uses: changesets/action/select-mode@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
 
-  # The kit and the design guide ride on the same tag as release assets, so the
-  # website links releases/latest/download/<name> and never changes a URL.
-  release:
-    needs: publish
+  version:
+    needs: select-mode
+    if: needs.select-mode.outputs.mode == 'version'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
           node-version: 24
+          package-manager-cache: false
       - uses: pnpm/action-setup@f520eceda224fe1a4aed5a2a27a194379a409996 # v6
         with:
           run_install: false
-      # `sharp` renders Buddy for `art/`; without it `build.mjs` cannot run and
-      # the check that compares the committed outputs to a fresh build compares
-      # nothing.
       - run: pnpm install --frozen-lockfile
-      - run: pnpm run build && pnpm run kit
-      - env:
+      - name: Prepare and validate the release PR
+        uses: changesets/action/version@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+        with:
+          script: pnpm release:version
+          pr-title: "chore: release @origin89/brand"
+          commit-message: "chore: release @origin89/brand"
+
+  pack:
+    needs: select-mode
+    if: needs.select-mode.outputs.mode == 'publish'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    outputs:
+      pack-dir-artifact-id: ${{ steps.pack.outputs.pack-dir-artifact-id }}
+      kit-artifact-id: ${{ steps.kit.outputs.artifact-id }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - uses: pnpm/action-setup@f520eceda224fe1a4aed5a2a27a194379a409996 # v6
+        with:
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: git diff --exit-code
+      - name: Pack the validated package
+        id: pack
+        uses: changesets/action/pack@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+        with:
+          publish-plan-artifact-id: ${{ needs.select-mode.outputs.publish-plan-artifact-id }}
+      - name: Stage the kit and guide
+        run: |
+          mkdir -p dist/release-assets
+          cp dist/origin89-brand-kit.zip identity/guide/output/pdf/origin89-design-guide.pdf dist/release-assets/
+      - id: kit
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: brand-release-assets
+          path: dist/release-assets/*
+          if-no-files-found: error
+
+  publish:
+    needs: pack
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - uses: pnpm/action-setup@f520eceda224fe1a4aed5a2a27a194379a409996 # v6
+        with:
+          run_install: false
+      - run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Publish the prepared package and release notes
+        uses: changesets/action/publish@ae32849d5ba541f9ae29e40e22a623bc13562f51 # v2.1.2
+        env:
+          NPM_CONFIG_PROVENANCE: "true"
+          PNPM_CONFIG_PROVENANCE: "true"
+        with:
+          pack-dir-artifact-id: ${{ needs.pack.outputs.pack-dir-artifact-id }}
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          artifact-ids: ${{ needs.pack.outputs.kit-artifact-id }}
+          path: dist/release-assets
+          merge-multiple: true
+      # Also run on retries where npm already has this version.
+      - name: Attach the validated kit and guide
+        env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          version="${GITHUB_REF_NAME#brand-v}"
-          gh release create "${GITHUB_REF_NAME}" dist/origin89-brand-kit.zip identity/guide/output/pdf/origin89-design-guide.pdf \
-            --title "brand ${version}" \
-            --notes "Brand kit ${version}. Logos as SVG and PNG, icons, fonts with their OFL files, the colour tokens and the design guide; terms in LICENSE.md inside the archive. The npm package @origin89/brand@${version} carries the same identity for code."
+          version=$(node -p "require('./package.json').version")
+          gh release upload "v${version}" dist/release-assets/origin89-brand-kit.zip dist/release-assets/origin89-design-guide.pdf --clobber

@@ -5,6 +5,9 @@ name: check
 on:
   push:
   pull_request:
+  # GITHUB_TOKEN-created release PRs do not trigger pull_request workflows.
+  # Select changeset-release/main here to run its required package check.
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -16,6 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
         with:
@@ -27,6 +31,11 @@ jobs:
       # the check that compares the committed outputs to a fresh build compares
       # nothing.
       - run: pnpm install --frozen-lockfile
+      - name: Validate pending changesets
+        if: hashFiles('.changeset/*.md', '!.changeset/README.md') != ''
+        run: |
+          git show-ref --verify --quiet refs/heads/main || git branch --no-track main origin/main
+          pnpm changeset status
       - run: pnpm check
       - run: git diff --exit-code
       - run: pnpm pack --dry-run
