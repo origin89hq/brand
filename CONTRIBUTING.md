@@ -1,7 +1,7 @@
 # Contributing
 
 Colour changes go in `palette/src/palette.mjs`, with the reason beside the
-value. Run `npm run check`: it regenerates `tokens/` and `brand.json`, and it
+value. Run `pnpm check`: it regenerates `tokens/` and `brand.json`, and it
 fails if a value no longer clears the contrast floor it claims. Commit the
 regenerated files with the change.
 
@@ -11,3 +11,21 @@ taken from pull requests; open an issue first.
 
 A pull request states what changed, why, and how it was checked. Keep it to one
 change.
+
+## Development setup
+
+Follow the [Origin89 engineering standards](https://github.com/origin89hq/engineering)
+for working practices, tests, writing, and commits. `AGENTS.md` loads shared
+skills at the start of a task; `just skills-sync` refreshes them from engineering.
+Keep local constraints and domain-specific checks alongside those shared rules.
+
+Install just 1.58.0 and Python 3.9+ for the skill bootstrap. Run `just --list`
+for repository commands and `just check` before opening a pull request.
+
+Use Node 24 LTS and the pnpm version in `package.json`. Install dependencies
+with `pnpm install --frozen-lockfile`. Biome checks authored JavaScript and
+TypeScript; generated assets keep their existing validators.
+
+Biome covers the authored package/build JavaScript and its configuration. Python
+renderers own the generated preview HTML, provenance JSON, token CSS, and SVG
+assets; do not reformat those outputs independently of their generators.

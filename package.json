@@ -42,15 +42,20 @@
   "scripts": {
     "build": "node palette/build.mjs && node build.mjs",
     "verify": "node palette/verify.mjs && node verify.mjs",
-    "check": "pnpm run build && pnpm run verify && pnpm run kit",
+    "check": "pnpm lint && pnpm build && pnpm verify && pnpm kit",
     "changeset": "changeset",
     "release:version": "changeset version && pnpm check",
     "release:publish": "changeset publish",
-    "kit": "node kit.mjs"
+    "kit": "node kit.mjs",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome ci . --error-on-warnings",
+    "lint:fix": "biome check --write ."
   },
   "devDependencies": {
     "@changesets/cli": "3.0.2",
-    "sharp": "^0.35.4"
+    "sharp": "0.35.4",
+    "@biomejs/biome": "2.5.13"
   },
-  "packageManager": "pnpm@11.21.0"
+  "packageManager": "pnpm@12.3.4"
 }
