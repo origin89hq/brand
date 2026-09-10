@@ -1,5 +1,12 @@
 # @origin89/brand
 
+## 0.3.1
+
+### Patch Changes
+
+- 7c265a6: Include a changelog in the brand package and keep its generated manifest version
+  in sync through Changesets release PRs.
+
 ## 0.3.0
 
 ### Minor Changes
