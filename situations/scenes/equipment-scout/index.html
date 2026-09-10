@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-view="page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Buddy / Equipment scout — Origin89</title>
+  <style>
+    @font-face { font-family: Inter Tight; src: url(../../../fonts/InterTight-Variable.ttf); font-weight: 100 900; font-display: swap; }
+    @font-face { font-family: Plex; src: url(../../../fonts/IBMPlexMono-Regular.ttf); font-display: swap; }
+    * { box-sizing: border-box; }
+    :root { color-scheme: light; --paper: #f5f1e8; --sage: #e3e7db; --ink: #29372f; --muted: #697a6c; --blue: #2b4a97; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Inter Tight, sans-serif; -webkit-font-smoothing: antialiased; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .review-bar { max-width: 1320px; padding: 25px 36px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .review-name { display: flex; align-items: center; gap: 20px; }
+    .review-name img { width: 126px; height: auto; }
+    .review-name span { font: 10px Plex, monospace; letter-spacing: .08em; border-left: 1px solid #c8cdc1; padding-left: 20px; }
+    .views { display: flex; gap: 3px; }
+    .views button { font: 12px Inter Tight, sans-serif; padding: 9px 14px; color: var(--muted); background: transparent; border: 1px solid transparent; cursor: pointer; }
+    .views button[aria-pressed="true"] { color: var(--ink); border-color: #bbc4b7; }
+    .views button:focus-visible, a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+    main { max-width: 1320px; padding: 0 20px; margin: auto; }
+    .feature { min-height: 590px; background: var(--sage); display: grid; grid-template-columns: 46% 54%; align-items: center; }
+    .art { min-width: 0; text-align: center; position: relative; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+    .art img { display: block; width: 112%; max-width: none; height: auto; margin-left: -6%; position: relative; }
+    .art small { font: 9px Plex, monospace; letter-spacing: .10em; color: var(--muted); position: absolute; left: 0; right: 0; bottom: 48px; }
+    .story { padding: 55px 60px 55px 14px; }
+    .eyebrow { margin: 0 0 22px; color: var(--blue); font: 10px Plex, monospace; letter-spacing: .085em; }
+    h1 { margin: 0; font-size: clamp(32px, 3.5vw, 45px); line-height: 1.07; font-weight: 500; letter-spacing: -.045em; }
+    .description { margin: 24px 0 24px; max-width: 500px; font-size: 17px; line-height: 1.65; color: var(--muted); }
+    .prompts { margin-bottom: 27px; }
+    .prompt { padding: 14px 0; font-size: 14px; border-bottom: 1px solid #bec8b9; display: flex; justify-content: space-between; gap: 20px; }
+    .prompt span { color: var(--blue); }
+    .feature-foot { display: flex; align-items: center; gap: 18px; }
+    .cta { display: inline-flex; align-items: center; gap: 24px; min-height: 49px; padding: 0 19px; background: var(--blue); color: #fff; font-size: 13px; }
+    .cta span { font-size: 18px; }
+    .feature-foot small { font-size: 11px; color: var(--muted); line-height: 1.4; max-width: 110px; }
+    .delivery { padding: 25px 17px 32px; display: flex; gap: 24px; align-items: baseline; justify-content: space-between; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .delivery p { margin: 0; }
+    .delivery strong { color: var(--ink); font-weight: 500; }
+    .delivery nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    .delivery a { color: var(--blue); text-underline-offset: 4px; white-space: nowrap; }
+    html[data-view="cutout"] .feature { background-color: #f7f7f5; background-image: conic-gradient(#e7e8e4 25%, transparent 0 50%, #e7e8e4 0 75%, transparent 0); background-size: 28px 28px; }
+    html[data-view="dark"] .feature { background: #14231d; }
+    html:not([data-view="page"]) .feature { display: block; }
+    html:not([data-view="page"]) .story { display: none; }
+    html:not([data-view="page"]) .art { max-width: 690px; margin: auto; }
+    html:not([data-view="page"]) .art img { width: 100%; margin-left: 0; }
+    html:not([data-view="page"]) .art small { display: none; }
+    @media (min-width: 1350px) { main { padding-top: 20px; } }
+    @media (max-width: 800px) {
+      .review-bar { padding: 20px; flex-wrap: wrap; gap: 16px; }
+      .review-name span { font-size: 9px; }
+      main { padding: 0 12px; }
+      .feature { grid-template-columns: 1fr; }
+      .art { max-width: 480px; margin: auto; }
+      .art img { width: 100%; margin-left: 0; }
+      .art small { bottom: 15px; }
+      .story { padding: 32px 27px 42px; }
+      h1 { font-size: 36px; text-wrap: balance; }
+      h1 br { display: none; }
+      .description { font-size: 16px; }
+      .eyebrow { font-size: 9px; }
+      .delivery { flex-direction: column; gap: 14px; padding: 22px 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="review-bar">
+    <div class="review-name"><img src="../../../logos/origin89-horizontal-blue.svg" alt="Origin89"><span>BUDDY / EQUIPMENT SCOUT</span></div>
+    <div class="views" role="group" aria-label="Artwork preview background">
+      <button type="button" data-view="page" aria-pressed="true">Data page</button>
+      <button type="button" data-view="cutout" aria-pressed="false">Transparency</button>
+      <button type="button" data-view="dark" aria-pressed="false">Dark</button>
+    </div>
+  </header>
+  <main>
+    <section class="feature" aria-label="Data page artwork preview">
+      <div class="art">
+        <img src="buddy-equipment-scout.png" width="1600" height="1600" alt="Buddy the moose holding lowered blue binoculars and looking back toward you, with small tufts of field grass at his feet.">
+        <small>BUDDY / YOUR EQUIPMENT GUIDE</small>
+      </div>
+      <div class="story">
+        <p class="eyebrow">MEET BUDDY / YOUR EQUIPMENT GUIDE</p>
+        <h1>You don’t need to know<br> where to look.</h1>
+        <p class="description">Not sure where to start? Buddy helps you find a model, unpack a specification, and get back to the source.</p>
+        <div class="prompts">
+          <div class="prompt">Show me battery models <span aria-hidden="true">↗</span></div>
+          <div class="prompt">Where did this 100 Ah figure come from? <span aria-hidden="true">↗</span></div>
+          <div class="prompt">What’s documented for VE.Direct? <span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="feature-foot"><div class="cta">Find it with Buddy <span aria-hidden="true">↗</span></div><small>Artwork preview<br>Data page context</small></div>
+      </div>
+    </section>
+    <footer class="delivery">
+      <p><strong>“Found something.”</strong> Lowered binoculars, a familiar face, and a little field grass.</p>
+      <nav aria-label="Artwork files"><a href="buddy-equipment-scout.png">Transparent PNG</a><a href="../../../art/buddy-equipment-scout-transparent.webp">WebP</a><a href="scene.blend">Editable Blender scene</a></nav>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll('.views button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.documentElement.dataset.view = button.dataset.view;
+        document.querySelectorAll('.views button').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+      });
+    });
+  </script>
+</body>
+</html>
