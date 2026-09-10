@@ -183,14 +183,14 @@
       },
       {
         "file": "tokens/palette.mjs",
-        "bytes": 7802,
-        "sha256": "d766d18c237ff9e382c029ac9eb2d267f6e67a7ad8026cc09ea3561dedc2fec3",
+        "bytes": 7859,
+        "sha256": "64c49f4ff99f712a54159936c9b617f3a928b53368442ed1d508c7e05cf432c3",
         "source": "palette/src/palette.mjs"
       },
       {
         "file": "tokens/colour.mjs",
-        "bytes": 4690,
-        "sha256": "5ab46b4bb6a9b42c007783ffa2718a529a2659465a9e1ef7351d1efaa7c3ba35",
+        "bytes": 4770,
+        "sha256": "1299dc405269130cc7dcf7ce079a118e10dfbd424106b7327a17d49508e8b5ea",
         "source": "palette/src/colour.mjs"
       }
     ],
