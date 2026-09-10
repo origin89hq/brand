@@ -62,11 +62,15 @@ which are the links the website uses.
 
 ## Release
 
-Bump `version` in `package.json`, run `npm run check`, commit, then push a
-tag named `brand-v<version>`. The workflow checks the tag against the version,
-rebuilds, refuses a dirty tree, publishes the package through npm trusted
-publishing and attaches the kit to a GitHub release. No token is stored in
-this repository.
+Run `pnpm changeset` with each change that should reach package consumers and
+include its Markdown file in the pull request. Changesets opens or updates a
+release PR on `main`, updating the package version, changelog, and generated
+manifest together. Merge that PR when ready to release; CI publishes to npm
+through trusted publishing and attaches the kit and guide to the GitHub release.
+
+See the [Origin89 release standard](docs/releases.md) for bump guidelines,
+setup, and recovery. New releases use Changesets' `v<version>` tags; existing
+`brand-v<version>` releases remain available.
 
 ## Terms
 

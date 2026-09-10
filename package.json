@@ -33,6 +33,7 @@
     "fonts",
     "art",
     "LICENSE.md",
+    "CHANGELOG.md",
     "README.md"
   ],
   "publishConfig": {
@@ -42,9 +43,13 @@
     "build": "node palette/build.mjs && node build.mjs",
     "verify": "node palette/verify.mjs && node verify.mjs",
     "check": "pnpm run build && pnpm run verify && pnpm run kit",
+    "changeset": "changeset",
+    "release:version": "changeset version && pnpm check",
+    "release:publish": "changeset publish",
     "kit": "node kit.mjs"
   },
   "devDependencies": {
+    "@changesets/cli": "3.0.2",
     "sharp": "^0.35.4"
   },
   "packageManager": "pnpm@11.21.0"

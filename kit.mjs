@@ -1,6 +1,6 @@
 //! Builds the downloadable brand kit, `dist/origin89-brand-kit.zip`: the logos
 //! as SVG and PNG, the icons, the fonts with their licences, the design guide
-//! and the terms. It is attached to every brand-v* release, so the website can
+//! and the terms. It is attached to every version release, so the website can
 //! link the latest one at a URL that never changes.
 import { execFileSync } from "node:child_process";
 import { cpSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
