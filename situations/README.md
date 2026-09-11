@@ -19,6 +19,16 @@ approved presentation scene. The generated `scene.blend` is ignored by Git;
 the recipe, render metadata and image exports are tracked. The package exports
 `art/buddy-equipment-scout-transparent.webp`.
 
+## KM43 canoe
+
+[Social artwork](scenes/km43-canoe/km43-social.jpg) · [Editable scene and rebuild instructions](scenes/km43-canoe/README.md)
+
+The green kilometre-43 marker and cottage shoreline lead the scene, with the
+canonical Buddy paddling a cedar canoe farther out on the lake.
+The character, canoe, paddle, life vest, lighting, and water reflection are native
+Blender elements. The cottage-inspired lake and marker are a packed generated
+background plate. The package exports `art/km43-social.webp`.
+
 ## Reserve
 
 [App preview](app-scenes/index.html) · [Illustration](app-scenes/buddy-reserve.png) · [Editable scene](buddy-reserve.blend)

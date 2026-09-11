@@ -160,6 +160,7 @@
       "art/avatar-playful.webp",
       "art/avatar-round.webp",
       "art/studio-transparent.webp",
+      "art/km43-social.webp",
       "art/buddy-equipment-scout-transparent.webp"
     ]
   },
@@ -554,6 +555,12 @@
         "bytes": 135606,
         "sha256": "b0a4cee2f505050562de5511d98f1ff453bf11042cd540ac7e83077525ea548e",
         "source": "buddy/presentation/studio-transparent.png"
+      },
+      {
+        "file": "art/km43-social.webp",
+        "bytes": 175932,
+        "sha256": "78a4c81d92dc00c5288d0605521fd3fd508b567dd298aa8abed3abe140408e0c",
+        "source": "situations/scenes/km43-canoe/km43-social.png"
       },
       {
         "file": "art/buddy-equipment-scout-transparent.webp",

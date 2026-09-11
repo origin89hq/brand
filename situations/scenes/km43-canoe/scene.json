@@ -1,0 +1,94 @@
+{
+  "base": "buddy/blender/buddy.blend",
+  "base_sha256": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+  "inputs": {
+    "buddy/blender/buddy.blend": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+    "buddy/presentation/face-front.blend": "7fca50a8acf8a4e9cd8fa562a4956efbefa5ca5942a3ea42586dc2914062cb10"
+  },
+  "recipe": "situations/source/build_km43_canoe.py",
+  "recipe_sha256": "9385ce133d4287060674d624138ae0942ee510a2b7e0048315b148a4460ae06a",
+  "source_files": {
+    "situations/source/build_km43_canoe.py": "9385ce133d4287060674d624138ae0942ee510a2b7e0048315b148a4460ae06a",
+    "situations/source/km43_craft.py": "fe22eb0da0cc14f040817d328b9e47f6550eead6c7549219167b3285d1a6ae9e",
+    "situations/source/km43_vest.py": "f76336a91989e5f8cd955b9d6bb7cb837e8731f74aa6d0cc735fff51f224c133"
+  },
+  "palette_sha256": "a10e602807d958aa4bac93188539138ebbcde05544ac421d66019d545f4e6125",
+  "environment": "assets/lake-cottage-shore-plate.png",
+  "environment_sha256": "28abb67bc8db97bb487b17a718f86c81151444e31ef860f1c93bece55d3be45e",
+  "environment_type": "generated raster plate based on user-provided cottage shore reference",
+  "native_character": true,
+  "native_props": true,
+  "live_compositor": true,
+  "static_pose": true,
+  "composition": "KM43 marker and lake first, Buddy canoeing as a secondary detail",
+  "canoe_heading_degrees": -40,
+  "canoe_uniform_scale": 0.54,
+  "canoe_offset": [
+    -0.3499999940395355,
+    1.100000023841858,
+    0
+  ],
+  "width": 2560,
+  "height": 1280,
+  "samples": 192,
+  "framing": {
+    "Antler | cupped palmate L": {
+      "x": [
+        0.695712685585022,
+        0.7732826471328735
+      ],
+      "y": [
+        0.5128657221794128,
+        0.6490814685821533
+      ]
+    },
+    "Antler | cupped palmate R": {
+      "x": [
+        0.6150020360946655,
+        0.6925704479217529
+      ],
+      "y": [
+        0.5145288109779358,
+        0.6507425308227539
+      ]
+    },
+    "Canoe | cedar hull": {
+      "x": [
+        0.6017789840698242,
+        0.7865959405899048
+      ],
+      "y": [
+        0.24715617299079895,
+        0.45014500617980957
+      ]
+    },
+    "Paddle | shaped ottertail blade": {
+      "x": [
+        0.6030305624008179,
+        0.655791699886322
+      ],
+      "y": [
+        0.2676967978477478,
+        0.35174188017845154
+      ]
+    }
+  },
+  "paddle_clearance_m": {
+    "shaft_to_hull": 0.06868049644947052,
+    "blade_to_hull": 0.24445284052848817,
+    "shaft_to_gunwale": 0.05458312738784173
+  },
+  "files": {
+    "buddy-canoe-transparent.png": "21ffd5805b0bb63d2d231247f712f910689dd5a636c69c482a0aa397e2142a67",
+    "km43-social.png": "61c6c80fd43de179f0ceb18c368f0a4a434fe7fa50f5923e28c40bdba5987cd5",
+    "scene.blend": "e85443451959f7984f50c7e7a4608a1cb4db3a6cf4479e52be0d15a896c032bd",
+    "km43-social.jpg": "ec972b57721fbfeebe0c095f79c74bab390f1fb0db738ec44f9363aaec097bb9"
+  },
+  "social_export": {
+    "width": 1280,
+    "height": 640,
+    "format": "jpeg",
+    "quality": 92,
+    "bytes": 187612
+  }
+}
