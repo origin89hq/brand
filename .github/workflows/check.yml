@@ -4,6 +4,7 @@ name: check
 
 on:
   push:
+    branches: [main]
   pull_request:
   # GITHUB_TOKEN-created release PRs do not trigger pull_request workflows.
   # Select changeset-release/main here to run its required package check.
