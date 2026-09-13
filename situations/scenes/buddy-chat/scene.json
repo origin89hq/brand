@@ -1,0 +1,148 @@
+{
+  "base": "buddy/blender/buddy.blend",
+  "inputs": {
+    "buddy/blender/buddy.blend": "8b5065a63e84c71a17cef8429880bd45c983b2c205c4bb3eed04a42f80fb2c9f",
+    "buddy/presentation/face-front.blend": "7fca50a8acf8a4e9cd8fa562a4956efbefa5ca5942a3ea42586dc2914062cb10"
+  },
+  "recipe": "situations/source/build_buddy_chat.py",
+  "source_files": {
+    "situations/source/build_buddy_chat.py": "ef10cc77b8a0d3c14dabce84ed4723e69d6f62e26b08926fc1b561e42f66b182",
+    "situations/source/chat_geometry.py": "e7947a1d76e21b38a7c1d99d8be087cc5ee31451aee8c5c850bbb0a64b15cce2",
+    "identity/tokens/brand-tokens.json": "a10e602807d958aa4bac93188539138ebbcde05544ac421d66019d545f4e6125",
+    "logos/origin89-horizontal-white.svg": "3a798e27ee7cfb73e7900ea237c713e94ec8bfc41fe673effd7778914c3dd102",
+    "fonts/InterTight-600.ttf": "c371b7bd6cc02f5240c73bc178ef365b36fb8fcd9db7baa02d454672f12f5a6f",
+    "fonts/IBMPlexMono-Regular.ttf": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46",
+    "situations/source/export_buddy_chat.mjs": "d9a2df5a8f7537201d5157b2443663d97d26cad5766f1686de32b9077085989c"
+  },
+  "native_character": true,
+  "native_props": true,
+  "native_branding": true,
+  "static_pose": true,
+  "width": 2560,
+  "height": 1280,
+  "samples": 192,
+  "framing": {
+    "Antler | cupped palmate L": {
+      "x": [
+        0.7091846466064453,
+        0.8605973720550537
+      ],
+      "y": [
+        0.6229819655418396,
+        0.9308490753173828
+      ]
+    },
+    "Antler | cupped palmate R": {
+      "x": [
+        0.5026010274887085,
+        0.6578332781791687
+      ],
+      "y": [
+        0.6140912175178528,
+        0.9088508486747742
+      ]
+    },
+    "Card | Question": {
+      "x": [
+        0.44349563121795654,
+        0.551504373550415
+      ],
+      "y": [
+        0.45126447081565857,
+        0.651592493057251
+      ]
+    },
+    "Card | Conversation": {
+      "x": [
+        0.835084080696106,
+        0.9424158930778503
+      ],
+      "y": [
+        0.4597655236721039,
+        0.6582834124565125
+      ]
+    },
+    "Card | conversation dot": {
+      "x": [
+        0.8567094206809998,
+        0.8717092275619507
+      ],
+      "y": [
+        0.5514066815376282,
+        0.5812921524047852
+      ]
+    },
+    "Card | conversation dot.001": {
+      "x": [
+        0.8812500834465027,
+        0.8962499499320984
+      ],
+      "y": [
+        0.5419025421142578,
+        0.5717880129814148
+      ]
+    },
+    "Card | conversation dot.002": {
+      "x": [
+        0.9057907462120056,
+        0.9207906126976013
+      ],
+      "y": [
+        0.5323984026908875,
+        0.5622839331626892
+      ]
+    },
+    "Card | Answer": {
+      "x": [
+        0.8394132256507874,
+        0.9480867385864258
+      ],
+      "y": [
+        0.2210264801979065,
+        0.4231456220149994
+      ]
+    },
+    "Card | answer line 1": {
+      "x": [
+        0.8708360195159912,
+        0.9256619811058044
+      ],
+      "y": [
+        0.33950310945510864,
+        0.37796351313591003
+      ]
+    },
+    "Card | answer line 2": {
+      "x": [
+        0.8663370013237,
+        0.9211629629135132
+      ],
+      "y": [
+        0.3006766438484192,
+        0.33913707733154297
+      ]
+    },
+    "Card | answer line 3": {
+      "x": [
+        0.8618379831314087,
+        0.8996124863624573
+      ],
+      "y": [
+        0.269693523645401,
+        0.3003106117248535
+      ]
+    }
+  },
+  "arm_lengths_preserved": true,
+  "character_inputs_unchanged": true,
+  "scene_sha256": "b8f950a0796225ea4a2c3270a6c8ce8af5fa8b9f32f5f23b206b0a09429f41b6",
+  "render_sha256": "97a1cd911a8df14342342bc2292f3cc247355139918eaa82bd7e4e00cbce6865",
+  "social_export": {
+    "width": 1280,
+    "height": 640,
+    "format": "jpeg",
+    "quality": 92,
+    "bytes": 58663,
+    "sha256": "34c1f7454335a258220651ac949f5d170e8657c1697a9661a67494acfa693ade"
+  }
+}
