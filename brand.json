@@ -160,6 +160,7 @@
       "art/avatar-playful.webp",
       "art/avatar-round.webp",
       "art/studio-transparent.webp",
+      "art/buddy-social.webp",
       "art/km43-social.webp",
       "art/buddy-equipment-scout-transparent.webp"
     ]
@@ -555,6 +556,12 @@
         "bytes": 135606,
         "sha256": "b0a4cee2f505050562de5511d98f1ff453bf11042cd540ac7e83077525ea548e",
         "source": "buddy/presentation/studio-transparent.png"
+      },
+      {
+        "file": "art/buddy-social.webp",
+        "bytes": 40944,
+        "sha256": "50c5580369af5b0cfb37f4a4e244d89da00616bbbdad3e148ef902d576c12ec3",
+        "source": "situations/scenes/buddy-chat/buddy-social.png"
       },
       {
         "file": "art/km43-social.webp",

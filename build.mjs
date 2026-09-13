@@ -82,6 +82,7 @@ const expressions = [
 ];
 const stem = (e) => (e === "welcoming" ? "portrait" : `portrait-${e}`);
 const situations = [
+  ["situations/scenes/buddy-chat/buddy-social.png", "art/buddy-social.webp", 1280],
   ["situations/scenes/km43-canoe/km43-social.png", "art/km43-social.webp", 1280],
   [
     "situations/scenes/equipment-scout/buddy-equipment-scout.png",
