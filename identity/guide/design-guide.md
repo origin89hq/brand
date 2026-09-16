@@ -159,11 +159,11 @@ Choose the version for the surface.
 
 PRIMARY / LIGHT
 
-Bridge blue with chalk numerals. Use for the website, stationery and light interfaces.
+Bridge blue with chalk numerals. Use for stationery and light interfaces.
 
 REVERSED / DARK
 
-White plate and wordmark on a dark surface. Use the knockout SVG when the substrate should show through.
+White plate and wordmark on a dark surface, including the website. Use the knockout SVG when the substrate should show through.
 
 MONOCHROME / LIGHT
 
@@ -319,7 +319,7 @@ DESIGN PREVIEW / SAMPLE DATA
 
 Use semantic tokens
 
-The kit includes the current light and dark product palettes. Keep states connected to labels and icons.
+The kit includes the current dark and light product palettes. Keep states connected to labels and icons.
 
 Blue on ink
 
@@ -328,6 +328,10 @@ Blue on ink
 Too low for ordinary body text. Use the lightened dark-theme link token (#6279ad): 4.61:1 on ink.
 
 Missing is a state, not zero. Show freshness beside readings.
+
+Dark by default
+
+Dark is the default theme for Origin89 surfaces, and the website is dark-only for now. The palette keeps its light values so the docs site and app still work in light mode. There is no light web design yet.
 
 DESIGN GUIDE / v1.0 / 08 SEP 2026
 
@@ -367,6 +371,16 @@ TYPE SCALE
 
 Body: 16 px / 24 px line height. Use tabular readings, visible units and a distinct freshness label.
 
+Display on the web
+
+Inter Tight 700 in sentence case with tight tracking: about -0.035em at display sizes, never tighter than -0.05em. Body copy uses Inter Tight 400 or 500; 500 comes from the variable font.
+
+Mono is for data
+
+IBM Plex Mono sets designators (U7, CN1), units, readings and file names. Never use it to make prose look technical.
+
+Michroma appears only in the outlined logo artwork. Do not set text in it.
+
 DESIGN GUIDE / v1.0 / 08 SEP 2026
 
 10 / 20
@@ -392,6 +406,18 @@ Warm ivory #eadfcf. Roughness 0.36. Raised numerals or a recessed inverse plate.
 Soft studio
 
 Broad key, soft fill and rim. AgX: plate -0.65 EV; Buddy -0.55 EV. Orthographic views.
+
+Product renders
+
+Render products from their real CAD and fabrication data: board copper, pads and silkscreen from the Gerbers, and parts placed from the pick-and-place data with their real markings. Never invent a product shot.
+
+Product studio
+
+A dark studio on black: soft key light, blue rim light, no visible floor. Signal blue #7f9ce0 lights data paths such as the trace glow and the antenna. Use one green status light per scene, and amber only for warm light from windows or a pending state.
+
+Site miniatures
+
+The cottage, telecom shelter and mine utility are dark plinth dioramas in the same studio. Signal-blue ground paths lead to the building that holds the Controller. Third-party equipment stays unbranded.
 
 3D IS FOR HEROES, ICONS AND EXPLAINERS. USE FLAT SVG FOR NAVIGATION AND HARDWARE MARKING.
 
@@ -633,6 +659,30 @@ Use a consistent rhythm
 
 Spacing: 4, 8, 16, 24, 40, 64 px. Align artwork to the same grid as copy.
 
+04
+
+Start dark
+
+Web surfaces use the dark theme only. Layer page, surface and surface-raised from the ground up.
+
+05
+
+Frame with the plate
+
+Cards, stages, panels and inputs take the Plate 89 clipped corner, a 45° bevel, instead of rounded corners. Borders are 1 px hairlines in line or line-strong.
+
+06
+
+Let renders stand free
+
+Renders sit frameless on the page or over a faint dot grid, not inside photo cards. Media such as the hero film runs full bleed; text stays in the content column.
+
+07
+
+Give each color one job
+
+Action blue fills the one primary action. Signal blue draws lines and selection. Nominal green appears at most once per screen, for a live reading. Amber marks pending or planned work, beside its status word.
+
 EXAMPLE WEB LAYOUT / 24 PX GUTTERS / 40 PX SECTION PADDING
 
 DESIGN GUIDE / v1.0 / 08 SEP 2026
@@ -668,6 +718,18 @@ The user decides.
 Keep proposed changes separate from measurements and confirmed actions. Surface uncertainty and missing information.
 
 Motion direction: 180-240 ms fades or small pose transitions. No perpetual bobbing beside live readings. Reduced motion uses a still pose.
+
+Hero film
+
+The hero is a looping product film rendered from the CAD. Callouts are positioned from the render camera, so each stays on the part it names. With reduced motion, show a still and pause the loop.
+
+Instruments
+
+Interactive instruments demonstrate behavior: idle current, the watchdog, protocol frames. Label example data as an example.
+
+Name the status
+
+Use the same four words everywhere: Published, Specified, Planned, Pending bench. A measured value names its conditions, for example "11 mA at 13.1 V, radio off".
 
 STILLS + KEYED SOURCE POSES INCLUDED.
 
