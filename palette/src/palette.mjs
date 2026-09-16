@@ -130,6 +130,14 @@ export const TOKENS = [
   },
 
   {
+    name: "signal",
+    dark: "#7f9ce0",
+    light: "#5771b2",
+    check: "text",
+    why: "Data and signal paths: callout leader lines, the lit trace and antenna glow in renders, selected-state outlines, focus-adjacent highlights, and designator labels on a reading (U7, CN1). Those labels are text, which action-lit cannot carry at 3.39:1 on ink, and link already means a link. Never a reading's state — Estimated is info — and never the focus indicator itself.",
+  },
+
+  {
     name: "nominal",
     dark: "#2f9d64",
     light: "#4c7d5f",

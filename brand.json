@@ -30,6 +30,7 @@
         "action-lit": "#3f61b3",
         "link": "#6279ad",
         "on-fill": "#ffffff",
+        "signal": "#7f9ce0",
         "nominal": "#2f9d64",
         "warning": "#e9a13c",
         "nominal-deep": "#168c54",
@@ -52,6 +53,7 @@
         "action-lit": "#3f61b3",
         "link": "#2b4a97",
         "on-fill": "#ffffff",
+        "signal": "#5771b2",
         "nominal": "#4c7d5f",
         "warning": "#9f6601",
         "nominal-deep": "#4c7d5f",
@@ -173,20 +175,20 @@
     "tokens": [
       {
         "file": "tokens/tailwind.css",
-        "bytes": 1306,
-        "sha256": "2b4347530a023c2a57d9784269ca9061353c8bb438b4db36938c26768db61bec",
+        "bytes": 1333,
+        "sha256": "07637b5ac8186b2fd2ec530becbfbc85935c1fd4b1fb901525d829592bd37b8c",
         "source": "palette/tailwind.css"
       },
       {
         "file": "tokens/themes.css",
-        "bytes": 8422,
-        "sha256": "baf60dbb07b7935ff5ffd445093fd3f4ad9013785e40eef9ea0f44277d938dd3",
+        "bytes": 8942,
+        "sha256": "e3646dcb27915040de5c431c54acfaeb5a6e274b23e9d2dc1ddf00703f64e42d",
         "source": "palette/themes.css"
       },
       {
         "file": "tokens/palette.mjs",
-        "bytes": 7859,
-        "sha256": "64c49f4ff99f712a54159936c9b617f3a928b53368442ed1d508c7e05cf432c3",
+        "bytes": 8339,
+        "sha256": "416ed3df9bb36cfea39f0fac133b9fc9f2be4603c9428154f4a10d33b0b20071",
         "source": "palette/src/palette.mjs"
       },
       {

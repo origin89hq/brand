@@ -76,6 +76,14 @@
      This is the plate's own legend: white on blue with a thin white rim. */
   --color-on-fill: #ffffff;
 
+  /* Data and signal paths: callout leader lines, the lit trace and antenna
+     glow in renders, selected-state outlines, focus-adjacent highlights, and
+     designator labels on a reading (U7, CN1). Those labels are text, which
+     action-lit cannot carry at 3.39:1 on ink, and link already means a link.
+     Never a reading's state — Estimated is info — and never the focus
+     indicator itself. */
+  --color-signal: #7f9ce0;
+
   /* Healthy. Was the brand and the action colour at once, which is why the
      eye had nothing to triage with. Now used at most once per screen, never
      as a fill, and never alone — it is 12.5 from alarm under protanopia. */
@@ -140,6 +148,7 @@
     --color-action-lit: #3f61b3;
     --color-link: #2b4a97;
     --color-on-fill: #ffffff;
+    --color-signal: #5771b2;
     --color-nominal: #4c7d5f;
     --color-warning: #9f6601;
     --color-nominal-deep: #4c7d5f;
@@ -165,6 +174,7 @@
   --color-action-lit: #3f61b3;
   --color-link: #2b4a97;
   --color-on-fill: #ffffff;
+  --color-signal: #5771b2;
   --color-nominal: #4c7d5f;
   --color-warning: #9f6601;
   --color-nominal-deep: #4c7d5f;
@@ -188,6 +198,7 @@
   --color-action-lit: #3f61b3;
   --color-link: #6279ad;
   --color-on-fill: #ffffff;
+  --color-signal: #7f9ce0;
   --color-nominal: #2f9d64;
   --color-warning: #e9a13c;
   --color-nominal-deep: #168c54;
