@@ -38,6 +38,15 @@ scene uses the canonical character rig and fur, native curve and mesh props,
 the original vector wordmark, and editable text with packed brand fonts.
 The package exports `art/buddy-social.webp` for social previews and README banners.
 
+## Site miniatures
+
+[Render instructions](scenes/site-miniatures/README.md)
+
+A cottage, a telecom shelter and a mine utility on dark plinths for the website's
+homepage, without Buddy. `source/build_site_miniatures.py` models them from
+primitives. The renders are made locally and packaged by the website, not by
+this package.
+
 ## Reserve
 
 [App preview](app-scenes/index.html) · [Illustration](app-scenes/buddy-reserve.png) · [Editable scene](buddy-reserve.blend)
