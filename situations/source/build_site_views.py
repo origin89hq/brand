@@ -101,6 +101,7 @@ def field(M):
 
 
 def rock(name, loc, r, M, rng):
+    """One squashed, randomly turned boulder of roughly radius r."""
     bm = bmesh.new()
     bmesh.ops.create_icosphere(bm, subdivisions=1, radius=r)
     for v in bm.verts:
@@ -149,6 +150,7 @@ def surroundings(name, M, cam):
 
 
 def camera(s, view):
+    """Place the scene camera from a VIEWS entry and return it."""
     cam_d = bpy.data.cameras.new('cam')
     cam_d.lens = view['lens']
     cam = link(bpy.data.objects.new('cam', cam_d))
@@ -162,6 +164,7 @@ def camera(s, view):
 
 
 def lights(target):
+    """The miniatures' rig, opened up for a wide frame."""
     t = Vector(target)
 
     def area(name, loc, energy, size, color=(1, 1, 1)):
@@ -176,8 +179,7 @@ def lights(target):
         ob.visible_camera = False
         return ob
 
-    # The same rig as the miniatures, opened up for a wide frame: a cool moon key
-    # from the left, a blue rim behind, and a low fill toward the camera.
+    # A cool moon key from the left, a blue rim behind, a low fill toward the camera.
     area('key', (-2.4, 1.6, 2.6), 70, 2.2, (.78, .85, 1.))
     area('rim', (1.8, 2.8, .8), 110, 1.2, (.38, .52, 1.))
     area('fill', (2.2, -2.4, .7), 10, 3.)
