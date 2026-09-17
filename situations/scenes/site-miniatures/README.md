@@ -11,8 +11,8 @@ or image input.
 The scenes follow the design guide's product studio and site miniatures rules
 ([`identity/guide/design-guide.md`](../../../identity/guide/design-guide.md)):
 
-- Dark satin materials on a black plinth, under a soft warm key, a blue rim and a
-  weak fill, with an orthographic camera and AgX Medium High Contrast.
+- Dark satin materials on a charcoal plinth, under a soft warm key, a blue rim and
+  a fill, with an orthographic camera and AgX Medium High Contrast.
 - Blue emissive signal paths on the ground lead from the equipment to the
   building that holds the Controller.
 - One green status light per site, on that building. The cottage windows glow
@@ -29,10 +29,12 @@ blender --background --python-exit-code 1 --python situations/source/build_site_
 ```
 
 This writes `audience-{cottage,telecom,mine}.png` (1400 × 1100, transparent,
-128 samples) and an editable `audience-*.blend` for each to the ignored
-`.build/site-miniatures/`. Pass `--out DIR` after `--` to choose the
-destination and `--only cottage telecom` to render a subset. Each scene
-renders in seconds.
+128 samples), `audience-*-signals.json` and an editable `audience-*.blend` for
+each to the ignored `.build/site-miniatures/`. The JSON holds every signal path
+projected through the render camera, in the render's pixels, ordered from the
+equipment to the building. Pass `--out DIR` after `--` to choose the
+destination, `--only cottage telecom` to render a subset and `--samples 32` for a
+quick test render. Each scene renders in seconds.
 
 ## On the website
 
@@ -47,6 +49,8 @@ blender --background --python-exit-code 1 --python situations/source/build_site_
 
 The packager (`apps/website/scripts/package-home-media.mjs` in origin89hq/website)
 crops each render to its alpha bounds (alpha > 8) plus 30 px, clamped to the
-frame, writes `audience-3d-{cottage,telecom,mine}.webp` and records each file's
-SHA-256 with this script as its source. Its `--only dioramas` option repackages
+frame, writes `audience-3d-{cottage,telecom,mine}.webp` with the signal paths
+shifted into the crop (`audience-3d-*-signals.json`), and records each file's
+SHA-256 with this script as its source. The homepage runs light pulses along
+those paths over the image. Its `--only dioramas` option repackages
 the miniatures without the Controller renders.

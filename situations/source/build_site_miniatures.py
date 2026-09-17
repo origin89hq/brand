@@ -9,21 +9,28 @@ no character or hardware input. From the repository root:
 Same world as the website's Controller renders: dark satin materials on black
 plinths, a soft key, a blue rim, one green status light per site and blue signal
 paths on the ground. The equipment is generic and unbranded. Writes
-audience-{cottage,telecom,mine}.png (1400 x 1100 transparent RGBA, 128 samples) and
-the matching .blend for editing. --out defaults to .build/site-miniatures/; --only
-renders a subset.
+audience-{cottage,telecom,mine}.png (1400 x 1100 transparent RGBA, 128 samples),
+audience-<site>-signals.json with each signal path projected through the camera
+(pixel coordinates in that image, in the direction data flows, toward the
+building), and the matching .blend for editing. The website animates pulses
+along those paths. --out defaults to .build/site-miniatures/; --only renders a
+subset; --samples lowers the sample count for test renders.
 """
 import argparse
+import json
 import math
 import sys
 from pathlib import Path
 
 import bmesh
 import bpy
+from bpy_extras.object_utils import world_to_camera_view
 from mathutils import Matrix, Vector
 
 ROOT = Path(__file__).resolve().parents[2]
 SAMPLES = 128
+# Signal paths drawn by the scene builders, as (name, points) in world space.
+SIGNALS = []
 
 
 def reset():
@@ -46,7 +53,7 @@ def reset():
     w = bpy.data.worlds.new('World')
     w.use_nodes = True
     w.node_tree.nodes['Background'].inputs['Color'].default_value = (.02, .025, .035, 1)
-    w.node_tree.nodes['Background'].inputs['Strength'].default_value = .12
+    w.node_tree.nodes['Background'].inputs['Strength'].default_value = .2
     s.world = w
     return s
 
@@ -75,11 +82,11 @@ def mat(name, color, rough=.55, metal=0., emit=None, strength=0., coat=0.):
 def palette():
     MATS.clear()
     return {
-        'plinth': mat('plinth', (.012, .014, .018), .45, coat=.3),
-        'ground': mat('ground', (.008, .009, .012), .92),
-        'body': mat('body', (.06, .065, .075), .5),
-        'body2': mat('body2', (.075, .08, .09), .45),
-        'roof': mat('roof', (.025, .028, .032), .35, metal=.6),
+        'plinth': mat('plinth', (.026, .03, .038), .45, coat=.3),
+        'ground': mat('ground', (.016, .018, .024), .92),
+        'body': mat('body', (.082, .088, .1), .5),
+        'body2': mat('body2', (.1, .107, .12), .45),
+        'roof': mat('roof', (.04, .044, .05), .35, metal=.6),
         'trim': mat('trim', (.18, .19, .2), .4, metal=.8),
         'glass': mat('glass', (.01, .015, .03), .08, coat=1.),
         'window': mat('window', (.9, .6, .3), .4, emit=(1., .62, .3), strength=3.),
@@ -87,10 +94,10 @@ def palette():
         'tree': mat('tree', (.02, .035, .028), .75),
         'trunk': mat('trunk', (.03, .025, .02), .8),
         'rock': mat('rock', (.045, .047, .05), .85),
-        'signal': mat('signal', (.02, .06, .25), .3, emit=(.08, .24, 1.), strength=2.2),
+        'signal': mat('signal', (.02, .06, .25), .3, emit=(.08, .24, 1.), strength=3.2),
         'status': mat('status', (.1, .6, .3), .3, emit=(.18, .62, .39), strength=10.),
         'beacon': mat('beacon', (.9, .5, .1), .3, emit=(.91, .63, .24), strength=12.),
-        'tank': mat('tank', (.09, .095, .1), .38, metal=.7),
+        'tank': mat('tank', (.12, .126, .135), .38, metal=.7),
     }
 
 
@@ -164,6 +171,8 @@ def prism(name, w, d, h, loc, m, overhang=.03):
 
 
 def tube(name, points, r, m):
+    if m.name == 'signal':
+        SIGNALS.append((name, points))
     cu = bpy.data.curves.new(name, 'CURVE')
     cu.dimensions = '3D'
     cu.bevel_depth = r
@@ -211,9 +220,9 @@ def studio(s, scale, target=(0, 0, .12)):
         ob.visible_camera = False
         return ob
 
-    area('key', (-1.6, -1.2, 2.2), 60, 1.4, (1., .97, .93))
+    area('key', (-1.6, -1.2, 2.2), 90, 1.4, (1., .97, .93))
     area('rim', (1.2, 2.1, .55), 200, .8, (.38, .52, 1.))
-    area('fill', (1.8, -1.6, .6), 8, 2.)
+    area('fill', (1.8, -1.6, .6), 18, 2.)
 
 
 def cottage(M):
@@ -386,6 +395,7 @@ SCENES = {'cottage': cottage, 'telecom': telecom, 'mine': mine}
 parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
 parser.add_argument('--out', type=Path, default=ROOT / '.build/site-miniatures')
 parser.add_argument('--only', nargs='+', choices=tuple(SCENES), default=())
+parser.add_argument('--samples', type=int, default=SAMPLES)
 args = parser.parse_args(sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else [])
 OUT = args.out
 ONLY = set(args.only)
@@ -394,10 +404,19 @@ for name, build in SCENES.items():
     if ONLY and name not in ONLY:
         continue
     s = reset()
+    s.cycles.samples = args.samples
     M = palette()
+    SIGNALS.clear()
     build(M)
     studio(s, 1.6 if name != 'telecom' else 1.75, target=(0, 0, .12 if name != 'telecom' else .27))
     s.render.resolution_x, s.render.resolution_y = 1400, 1100
+    w, h = s.render.resolution_x, s.render.resolution_y
+    bpy.context.view_layer.update()  # the camera's world matrix is stale until the scene updates
+    paths = []
+    for signal, points in SIGNALS:
+        projected = [world_to_camera_view(s, s.camera, Vector(p)) for p in points]
+        paths.append({'name': signal, 'points': [[round(co.x * w, 1), round((1 - co.y) * h, 1)] for co in projected]})
+    (OUT / f'audience-{name}-signals.json').write_text(json.dumps({'width': w, 'height': h, 'paths': paths}, indent=1) + '\n')
     s.render.filepath = str(OUT / f'audience-{name}.png')
     bpy.ops.render.render(write_still=True)
     bpy.ops.wm.save_as_mainfile(filepath=str(OUT / f'audience-{name}.blend'))
