@@ -4,9 +4,12 @@ Three generic sites on dark plinths for the website's homepage: a cottage with a
 solar rack, a woodshed generator and a propane tank; a telecom shelter with a
 lattice tower, a genset and a fuel tank; and a mine utility with a Quonset
 building, a genset container, tanks and a battery skid.
-[`build_site_miniatures.py`](../../source/build_site_miniatures.py) models each
-scene from primitives in an empty Blender file. It reads no character, hardware
-or image input.
+[`site_scenes.py`](../../source/site_scenes.py) models each scene from primitives
+in an empty Blender file and
+[`build_site_miniatures.py`](../../source/build_site_miniatures.py) renders it.
+Neither reads character, hardware or image input.
+[Site views](../site-views/README.md) render the same models wide, from the
+ground, for the website's `/sites/` pages.
 
 The scenes follow the design guide's product studio and site miniatures rules
 ([`identity/guide/design-guide.md`](../../../identity/guide/design-guide.md)):
