@@ -33,8 +33,9 @@ selects Metal devices):
 blender --background --python-exit-code 1 --python situations/source/build_site_views.py
 ```
 
-This writes `site-{cottage,telecom,mine}.png` (1536 × 1024, opaque, 160 samples)
-and an editable `site-*.blend` for each to the ignored `.build/site-views/`. Pass
+This writes `site-{cottage,telecom,mine}.png` (1536 × 1024, opaque, 160 samples),
+an editable `site-*.blend` for each, and `render-source.json` to the ignored
+`.build/site-views/`. Pass
 `--out DIR` after `--` to choose the destination, `--only cottage telecom` to
 render a subset, and `--samples 32 --scale 45` for a quick test render. Each scene
 renders in about ten seconds.
@@ -56,3 +57,10 @@ The packager (`apps/website/scripts/site-art.mjs` in origin89hq/website) encodes
 each render to `src/assets/art/{cottage,mining,telecom}.webp` and records its
 SHA-256 against this repository's commit and the two scripts' hashes. The website
 calls the mine site "mining".
+
+`render-source.json` carries the sha256 of `site_scenes.py` and
+`build_site_views.py` as they were when the renders were made. The packager
+refuses a brand checkout whose scripts differ from it, so a record cannot
+attribute renders to a checkout that did not produce them. Cycles output is not
+reproducible run to run, so the scripts are the only thing a later run can
+compare; re-rendering always changes the image bytes.

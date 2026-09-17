@@ -7,8 +7,10 @@ repository root:
     blender --background --python-exit-code 1 \\
       --python situations/source/build_site_views.py -- --out /tmp/site-views
 
-Writes site-{cottage,telecom,mine}.png (1536 x 1024 opaque, 160 samples) and the
-matching .blend for editing. Night on the site: a graded sky, ground fading into
+Writes site-{cottage,telecom,mine}.png (1536 x 1024 opaque, 160 samples), the
+matching .blend for editing, and render-source.json with the sha256 of the two
+scripts behind the renders, which the website's packager checks against the brand
+checkout it records. Night on the site: a graded sky, ground fading into
 the horizon with distance, warm light in the windows, one green status light per
 site and blue signal paths between the equipment. The equipment is generic and
 unbranded, and no scene shows a real installation. --out defaults to
@@ -16,6 +18,8 @@ unbranded, and no scene shows a real installation. --out defaults to
 test renders.
 """
 import argparse
+import hashlib
+import json
 import math
 import random
 import sys
@@ -41,6 +45,15 @@ VIEWS = {
     'telecom': {'target': (.0, .05, .30), 'az': 25, 'el': 12, 'dist': 2.3, 'lens': 42},
     'mine': {'target': (.0, .0, .13), 'az': -35, 'el': 15, 'dist': 2.0, 'lens': 45},
 }
+
+
+def source_stamp():
+    """The sha256 of the scripts behind these renders, so the packager can bind
+    them to the checkout it records. Cycles output is not reproducible, so the
+    scripts are the only thing a later run can compare."""
+    here = Path(__file__).resolve().parent
+    return {name: hashlib.sha256((here / name).read_bytes()).hexdigest()
+            for name in ('site_scenes.py', 'build_site_views.py')}
 
 
 def sky(s):
@@ -214,3 +227,4 @@ for name, build in SCENES.items():
     s.render.filepath = str(OUT / f'site-{name}.png')
     bpy.ops.render.render(write_still=True)
     bpy.ops.wm.save_as_mainfile(filepath=str(OUT / f'site-{name}.blend'))
+(OUT / 'render-source.json').write_text(json.dumps({'scripts': source_stamp()}, indent=1) + '\n')
