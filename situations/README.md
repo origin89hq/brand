@@ -43,9 +43,18 @@ The package exports `art/buddy-social.webp` for social previews and README banne
 [Render instructions](scenes/site-miniatures/README.md)
 
 A cottage, a telecom shelter and a mine utility on dark plinths for the website's
-homepage, without Buddy. `source/build_site_miniatures.py` models them from
-primitives. The renders are made locally and packaged by the website, not by
-this package.
+homepage, without Buddy. `source/site_scenes.py` models them from primitives and
+`source/build_site_miniatures.py` renders them. The renders are made locally and
+packaged by the website, not by this package.
+
+## Site views
+
+[Render instructions](scenes/site-views/README.md)
+
+The same three sites seen wide from the ground, at night, for the website's
+`/sites/` pages. `source/build_site_views.py` puts the shared models on an open
+field under a perspective camera. The renders are made locally and packaged by
+the website, not by this package.
 
 ## Reserve
 
