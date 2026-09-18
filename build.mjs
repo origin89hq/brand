@@ -34,6 +34,7 @@ const copies = {
     ["palette/themes.css", "tokens/themes.css"],
     ["palette/src/palette.mjs", "tokens/palette.mjs"],
     ["palette/src/colour.mjs", "tokens/colour.mjs"],
+    ["identity/tokens/plate.css", "tokens/plate.css"],
   ],
   logos: list("identity/logos", (f) => f.endsWith(".svg")).map((f) => [
     f,

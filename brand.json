@@ -196,6 +196,12 @@
         "bytes": 4770,
         "sha256": "1299dc405269130cc7dcf7ce079a118e10dfbd424106b7327a17d49508e8b5ea",
         "source": "palette/src/colour.mjs"
+      },
+      {
+        "file": "tokens/plate.css",
+        "bytes": 4678,
+        "sha256": "cee3ca41b0b0e96251aa4fad7f3dc4c67bb77ec39dca82e94a0148027f32dffa",
+        "source": "identity/tokens/plate.css"
       }
     ],
     "logos": [
