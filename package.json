@@ -18,6 +18,7 @@
     "./brand.json": "./brand.json",
     "./tokens/tailwind.css": "./tokens/tailwind.css",
     "./tokens/themes.css": "./tokens/themes.css",
+    "./tokens/plate.css": "./tokens/plate.css",
     "./tokens/palette": "./tokens/palette.mjs",
     "./tokens/colour": "./tokens/colour.mjs",
     "./logos/*": "./logos/*",

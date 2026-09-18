@@ -1,0 +1,159 @@
+/* Plate 89 geometry, as CSS. Values and reasoning for the guide behind it live in
+   identity/guide; the colour it references comes from themes.css and is never repeated here.
+
+   This is the layer every Origin89 surface was otherwise copying by hand: the clipped corner, the
+   control that wears it, the content column and the focus indicator. It is deliberately not a
+   component library. There is no colour literal, no font family and no layout in it, because a
+   consumer's palette comes from themes.css, its fonts come from its own asset pipeline, and its
+   pages are its own.
+
+   Load themes.css first. Everything here reads --color-* from it. */
+
+:root {
+  /* The content column, and the air beside it. */
+  --o89-max: 1320px;
+  --o89-gutter: clamp(16px, 4vw, 56px);
+
+  /* The chamfer. 10px is the plate's 14-unit corner at the scale a 14px frame carries; the guide
+     measures it against H, the plate height, not against the viewport. Keep the silhouette: this
+     is the one shape that must never round into an app tile. */
+  --o89-cut: 10px;
+
+  /* 180-240ms, per the guide's motion direction. Deliberate, not springy. */
+  --o89-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* The content column. */
+.o89-wrap {
+  width: min(100% - 2 * var(--o89-gutter), var(--o89-max));
+  margin-inline: auto;
+}
+
+/* The plate button.
+   Bridge blue measures 2.40:1 against ink, which is below the 3:1 a control boundary needs, so the
+   fill cannot carry that boundary. The rim does: the element paints the rim colour and its ::before
+   inset by 1px paints the fill. Deleting the rim is an accessibility regression, not a restyle. */
+.o89-plate {
+  --c: var(--o89-cut);
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+  clip-path: polygon(
+    var(--c) 0,
+    calc(100% - var(--c)) 0,
+    100% var(--c),
+    100% calc(100% - var(--c)),
+    calc(100% - var(--c)) 100%,
+    var(--c) 100%,
+    0 calc(100% - var(--c)),
+    0 var(--c)
+  );
+  transition: background 0.22s var(--o89-ease);
+}
+.o89-plate::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  clip-path: inherit;
+  transition: background 0.22s var(--o89-ease);
+}
+.o89-plate-action {
+  background: var(--color-action-rim);
+  color: var(--color-on-fill);
+}
+.o89-plate-action::before {
+  background: var(--color-action);
+}
+.o89-plate-action:hover::before {
+  background: var(--color-action-lit);
+}
+.o89-plate-ghost {
+  background: var(--color-line-strong);
+  color: var(--color-fg);
+}
+.o89-plate-ghost::before {
+  background: var(--color-page);
+}
+.o89-plate-ghost:hover {
+  background: var(--color-muted);
+}
+.o89-plate-ghost:is([aria-pressed="true"], [aria-selected="true"]) {
+  background: var(--color-fg);
+}
+.o89-plate-ghost:is([aria-pressed="true"], [aria-selected="true"])::before {
+  background: var(--color-surface-raised);
+}
+.o89-plate-sm {
+  --c: 7px;
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+.o89-plate:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+/* 40px is a size a mouse can hit and a finger cannot. On touch the small plate returns to the
+   guide's full target, whatever the viewport is doing. */
+@media (pointer: coarse) {
+  .o89-plate-sm {
+    min-height: 44px;
+  }
+}
+
+/* A panel that lifts off the page, wearing the same corner. --color-line-strong is a structural
+   edge and is exempt from the 3:1 control floor; do not use it to show focus. */
+.o89-frame {
+  border: 1px solid var(--color-line-strong);
+  border-radius: 14px;
+  corner-shape: bevel;
+  background: var(--color-surface);
+}
+
+/* The quiet action beside a plate. 44px tall because it is a control, not a sentence. */
+.o89-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--color-fg);
+  font-weight: 600;
+  font-size: 15px;
+}
+.o89-text-link svg {
+  transition: transform 0.24s var(--o89-ease);
+}
+.o89-text-link:hover {
+  color: var(--color-link);
+}
+.o89-text-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* The focus indicator is a safety element, not styling, which is why it ships here rather than
+   being re-derived per consumer. It is achromatic on dark on purpose: ringing a brand-blue control
+   in brand blue hides the indicator on the one control that most needs it. */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .o89-plate,
+  .o89-plate::before,
+  .o89-text-link svg {
+    transition: none;
+  }
+}
