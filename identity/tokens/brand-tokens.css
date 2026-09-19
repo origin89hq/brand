@@ -12,6 +12,8 @@
  --o89-page: #fbfcfa;
  --o89-surface: #f1f3f0;
  --o89-surface-raised: #ffffff;
+ --o89-chrome-glass: rgb(246 248 245 / 0.8);
+ --o89-chrome-hairline: rgb(7 9 12 / 0.07);
  --o89-line: #dfe3e6;
  --o89-line-strong: #c4ccd2;
  --o89-focus: #2b4a97;
@@ -35,6 +37,8 @@
  --o89-page: #07090c;
  --o89-surface: #0d1116;
  --o89-surface-raised: #12171e;
+ --o89-chrome-glass: rgb(10 13 17 / 0.8);
+ --o89-chrome-hairline: rgb(255 255 255 / 0.07);
  --o89-line: #1e252e;
  --o89-line-strong: #2b343f;
  --o89-focus: #ffffff;
