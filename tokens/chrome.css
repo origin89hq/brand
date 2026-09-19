@@ -1,0 +1,166 @@
+/* The site chrome: the floating navigation bar and the footer, as CSS.
+
+   Both origin89.com and the dataset site carry this, and carried it twice — the dataset's copy
+   says so in its own header, "ported from the website's chrome". Sixteen selectors were shared
+   between the two, ten of them identical once the two token spellings are read as the same value.
+   This is that core, once, taken from origin89.com, which is the reference for how the chrome
+   looks.
+
+   What is deliberately not here: how the bar collapses on a narrow window, and whatever each site
+   hangs off it — a product menu on one, a details menu on the other. The two answer that
+   differently and a shared sheet should not pretend otherwise.
+
+   Load themes.css first: every colour below is read from it, and the two translucent values are
+   mixed from it rather than written down again. Geometry comes from plate.css. */
+
+:root {
+  /* The bar's ground. Exactly halfway between the page and a surface, which is the value both
+     sites had already written by hand as rgb(10 13 17), carried at four fifths so the content
+     scrolling under it stays a suggestion of itself. */
+  --o89-chrome-glass: color-mix(
+    in srgb,
+    color-mix(in srgb, var(--color-page), var(--color-surface)) 80%,
+    transparent
+  );
+  /* A hairline, not a border: at seven percent it describes an edge without drawing a rule. */
+  --o89-chrome-hairline: color-mix(in srgb, var(--color-on-fill) 7%, transparent);
+}
+
+.o89-nav {
+  position: sticky;
+  z-index: 50;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  width: min(100% - 2 * var(--o89-gutter) + 24px, calc(var(--o89-max) + 24px));
+  margin: 12px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 10px 10px 10px 20px;
+  background: var(--o89-chrome-glass);
+  border: 1px solid var(--o89-chrome-hairline);
+  border-radius: 14px;
+  corner-shape: bevel;
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+}
+.o89-nav-logo img {
+  display: block;
+  width: auto;
+  height: 22px;
+}
+.o89-nav > nav {
+  display: flex;
+  gap: 22px;
+  margin-right: auto;
+}
+.o89-nav > nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--color-muted);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.o89-nav > nav a:hover,
+.o89-nav > nav a[data-current],
+.o89-nav > nav a[aria-current="page"] {
+  color: var(--color-fg);
+}
+/* The open page keeps a mark of its own, so hovering a neighbour cannot stand in for it. Either
+   spelling of "this is the page" is honoured, because aria-current is the one a screen reader
+   reads and data-current is what the site that wrote this rule uses. */
+.o89-nav > nav a[data-current]::after,
+.o89-nav > nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 1.5px;
+  background: var(--color-signal);
+}
+.o89-nav-github {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: var(--color-muted);
+}
+.o89-nav-github:hover {
+  color: var(--color-fg);
+  background: var(--color-surface-raised);
+}
+.o89-nav-github svg {
+  width: 20px;
+  height: 20px;
+}
+
+.o89-footer {
+  margin-top: clamp(64px, 8vw, 120px);
+  border-top: 1px solid var(--color-line);
+  /* The inset keeps the last line clear of a home indicator. */
+  padding-block: 64px calc(64px + env(safe-area-inset-bottom, 0px));
+  color: var(--color-muted);
+  font-size: 14px;
+}
+.o89-footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(3, 1fr);
+  gap: 40px 24px;
+}
+.o89-footer-brand {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+.o89-footer-brand img {
+  display: block;
+  width: auto;
+  height: 28px;
+}
+.o89-footer-brand p {
+  margin: 0;
+  max-width: 36ch;
+}
+/* The dot sits on the centre of the first line rather than its top, which is what the
+   half-leading offset is for. Its colour is the site's to say — what is being reported differs —
+   so only the shape is shared. */
+.o89-footer-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+}
+.o89-footer-status i {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-top: 0.55lh;
+  translate: 0 -50%;
+  border-radius: 50%;
+  background: var(--o89-chrome-status, var(--color-muted));
+}
+.o89-footer nav {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+.o89-footer nav b {
+  color: var(--color-fg);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.o89-footer nav a:hover {
+  color: var(--color-fg);
+}
+@media (max-width: 800px) {
+  .o89-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .o89-footer-brand {
+    grid-column: 1 / -1;
+  }
+}

@@ -202,6 +202,12 @@
         "bytes": 4678,
         "sha256": "cee3ca41b0b0e96251aa4fad7f3dc4c67bb77ec39dca82e94a0148027f32dffa",
         "source": "identity/tokens/plate.css"
+      },
+      {
+        "file": "tokens/chrome.css",
+        "bytes": 4703,
+        "sha256": "ffa9e207cbadbf822257fbda8ea9e607536425d5afe2c34adeaf7c96086cf655",
+        "source": "identity/tokens/chrome.css"
       }
     ],
     "logos": [
