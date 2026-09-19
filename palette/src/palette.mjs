@@ -56,6 +56,20 @@ export const TOKENS = [
     why: "A panel above the section: cards, reading tables, the things you look into.",
   },
   {
+    name: "chrome-glass",
+    dark: "rgb(10 13 17 / 0.8)",
+    light: "rgb(246 248 245 / 0.8)",
+    check: "none",
+    why: "The floating navigation bar's ground. Exactly halfway between page and surface, carried at four fifths so the content scrolling under it stays a suggestion of itself. Written out rather than mixed: Lightning CSS mangles a color-mix() whose argument is a var(), which is the same reason this file has none.",
+  },
+  {
+    name: "chrome-hairline",
+    dark: "rgb(255 255 255 / 0.07)",
+    light: "rgb(7 9 12 / 0.07)",
+    check: "none",
+    why: "The bar's edge. At seven percent it describes a boundary without drawing a rule, which is why it is not --color-line: this separates the bar from what slides beneath it, and a line would read as structure.",
+  },
+  {
     name: "line",
     dark: "#1e252e",
     light: "#dfe3e6",

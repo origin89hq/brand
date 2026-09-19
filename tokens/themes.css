@@ -28,6 +28,18 @@
      into. */
   --color-surface-raised: #12171e;
 
+  /* The floating navigation bar's ground. Exactly halfway between page and
+     surface, carried at four fifths so the content scrolling under it stays
+     a suggestion of itself. Written out rather than mixed: Lightning CSS
+     mangles a color-mix() whose argument is a var(), which is the same
+     reason this file has none. */
+  --color-chrome-glass: rgb(10 13 17 / 0.8);
+
+  /* The bar's edge. At seven percent it describes a boundary without drawing
+     a rule, which is why it is not --color-line: this separates the bar from
+     what slides beneath it, and a line would read as structure. */
+  --color-chrome-hairline: rgb(255 255 255 / 0.07);
+
   /* The quiet rule between rows. Deliberately below the UI floor — it
      separates, it does not inform. */
   --color-line: #1e252e;
@@ -138,6 +150,8 @@
     --color-page: #fbfcfa;
     --color-surface: #f1f3f0;
     --color-surface-raised: #ffffff;
+    --color-chrome-glass: rgb(246 248 245 / 0.8);
+    --color-chrome-hairline: rgb(7 9 12 / 0.07);
     --color-line: #dfe3e6;
     --color-line-strong: #c4ccd2;
     --color-focus: #2b4a97;
@@ -164,6 +178,8 @@
   --color-page: #fbfcfa;
   --color-surface: #f1f3f0;
   --color-surface-raised: #ffffff;
+  --color-chrome-glass: rgb(246 248 245 / 0.8);
+  --color-chrome-hairline: rgb(7 9 12 / 0.07);
   --color-line: #dfe3e6;
   --color-line-strong: #c4ccd2;
   --color-focus: #2b4a97;
@@ -188,6 +204,8 @@
   --color-page: #07090c;
   --color-surface: #0d1116;
   --color-surface-raised: #12171e;
+  --color-chrome-glass: rgb(10 13 17 / 0.8);
+  --color-chrome-hairline: rgb(255 255 255 / 0.07);
   --color-line: #1e252e;
   --color-line-strong: #2b343f;
   --color-focus: #ffffff;

@@ -10,21 +10,8 @@
    hangs off it — a product menu on one, a details menu on the other. The two answer that
    differently and a shared sheet should not pretend otherwise.
 
-   Load themes.css first: every colour below is read from it, and the two translucent values are
-   mixed from it rather than written down again. Geometry comes from plate.css. */
-
-:root {
-  /* The bar's ground. Exactly halfway between the page and a surface, which is the value both
-     sites had already written by hand as rgb(10 13 17), carried at four fifths so the content
-     scrolling under it stays a suggestion of itself. */
-  --o89-chrome-glass: color-mix(
-    in srgb,
-    color-mix(in srgb, var(--color-page), var(--color-surface)) 80%,
-    transparent
-  );
-  /* A hairline, not a border: at seven percent it describes an edge without drawing a rule. */
-  --o89-chrome-hairline: color-mix(in srgb, var(--color-on-fill) 7%, transparent);
-}
+   Load themes.css first: every colour below is read from it, including the bar's translucent
+   ground and its hairline. Geometry comes from plate.css. */
 
 .o89-nav {
   position: sticky;
@@ -36,8 +23,8 @@
   align-items: center;
   gap: 28px;
   padding: 10px 10px 10px 20px;
-  background: var(--o89-chrome-glass);
-  border: 1px solid var(--o89-chrome-hairline);
+  background: var(--color-chrome-glass);
+  border: 1px solid var(--color-chrome-hairline);
   border-radius: 14px;
   corner-shape: bevel;
   backdrop-filter: blur(14px) saturate(1.2);

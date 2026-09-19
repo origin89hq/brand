@@ -12,6 +12,8 @@
   --color-page: #07090c;
   --color-surface: #0d1116;
   --color-surface-raised: #12171e;
+  --color-chrome-glass: rgb(10 13 17 / 0.8);
+  --color-chrome-hairline: rgb(255 255 255 / 0.07);
   --color-line: #1e252e;
   --color-line-strong: #2b343f;
   --color-focus: #ffffff;
