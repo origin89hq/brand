@@ -20,6 +20,8 @@
         "page": "#07090c",
         "surface": "#0d1116",
         "surface-raised": "#12171e",
+        "chrome-glass": "rgb(10 13 17 / 0.8)",
+        "chrome-hairline": "rgb(255 255 255 / 0.07)",
         "line": "#1e252e",
         "line-strong": "#2b343f",
         "focus": "#ffffff",
@@ -43,6 +45,8 @@
         "page": "#fbfcfa",
         "surface": "#f1f3f0",
         "surface-raised": "#ffffff",
+        "chrome-glass": "rgb(246 248 245 / 0.8)",
+        "chrome-hairline": "rgb(7 9 12 / 0.07)",
         "line": "#dfe3e6",
         "line-strong": "#c4ccd2",
         "focus": "#2b4a97",
@@ -175,20 +179,20 @@
     "tokens": [
       {
         "file": "tokens/tailwind.css",
-        "bytes": 1333,
-        "sha256": "07637b5ac8186b2fd2ec530becbfbc85935c1fd4b1fb901525d829592bd37b8c",
+        "bytes": 1430,
+        "sha256": "4ca4ba1d724e6d1c8eaff3cd47499ac418d70b608fcc4363ff4d627ad9daa22a",
         "source": "palette/tailwind.css"
       },
       {
         "file": "tokens/themes.css",
-        "bytes": 8942,
-        "sha256": "e3646dcb27915040de5c431c54acfaeb5a6e274b23e9d2dc1ddf00703f64e42d",
+        "bytes": 9890,
+        "sha256": "a0a7d3377f4211130b99f10e2390230c3b55d703529824f254d0b736848f1698",
         "source": "palette/themes.css"
       },
       {
         "file": "tokens/palette.mjs",
-        "bytes": 8339,
-        "sha256": "416ed3df9bb36cfea39f0fac133b9fc9f2be4603c9428154f4a10d33b0b20071",
+        "bytes": 9126,
+        "sha256": "9729e1655cfdcd9f6f4e72986c9d7ec58cfe5ae3d8074f29888bd37204a2765b",
         "source": "palette/src/palette.mjs"
       },
       {
@@ -202,6 +206,12 @@
         "bytes": 4678,
         "sha256": "cee3ca41b0b0e96251aa4fad7f3dc4c67bb77ec39dca82e94a0148027f32dffa",
         "source": "identity/tokens/plate.css"
+      },
+      {
+        "file": "tokens/chrome.css",
+        "bytes": 4110,
+        "sha256": "737d3aabb39708b7b1afbbebb977003f3175718bf4f0aec2a2cf140e8f1d1e69",
+        "source": "identity/tokens/chrome.css"
       }
     ],
     "logos": [

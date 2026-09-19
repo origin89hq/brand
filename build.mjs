@@ -18,6 +18,7 @@ import {
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import { TOKENS } from "./palette/src/palette.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const out = process.argv[2] ? resolve(process.argv[2]) : here;
@@ -35,6 +36,7 @@ const copies = {
     ["palette/src/palette.mjs", "tokens/palette.mjs"],
     ["palette/src/colour.mjs", "tokens/colour.mjs"],
     ["identity/tokens/plate.css", "tokens/plate.css"],
+    ["identity/tokens/chrome.css", "tokens/chrome.css"],
   ],
   logos: list("identity/logos", (f) => f.endsWith(".svg")).map((f) => [
     f,
@@ -122,6 +124,22 @@ if (shipped.art.length !== expressions.length * 3 + 2 + situations.length)
   throw new Error("Buddy art set is incomplete");
 
 const palette = JSON.parse(readFileSync(join(here, "identity/tokens/brand-tokens.json"), "utf8"));
+/* The JSON export and the kit are built from that snapshot, not from the palette itself, so a
+   token added to palette/src and regenerated into the CSS can still be missing here — and then a
+   consumer reading the default export gets a different set of names than one reading themes.css.
+   That happened: chrome-glass and chrome-hairline reached the stylesheets and not this file, and
+   nothing failed. Re-run identity/source/export_tokens.mjs when this throws. */
+for (const theme of ["dark", "light"]) {
+  const exported = Object.keys(palette.themes[theme]);
+  const missing = TOKENS.map((t) => t.name).filter((n) => !exported.includes(n));
+  const extra = exported.filter((n) => !TOKENS.some((t) => t.name === n));
+  if (missing.length || extra.length)
+    throw new Error(
+      `brand-tokens.json (${theme}) disagrees with the palette` +
+        `${missing.length ? `; missing ${missing.join(", ")}` : ""}` +
+        `${extra.length ? `; unknown ${extra.join(", ")}` : ""}`,
+    );
+}
 const typography = {
   wordmark: {
     family: "Michroma",
