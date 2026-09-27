@@ -1,0 +1,45 @@
+# See origin89hq/engineering docs/dependencies.md.
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 3
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: [minor, patch]
+    commit-message:
+      prefix: ci
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # At least pnpm's minimumReleaseAge, or the frozen install rejects the update.
+    cooldown:
+      default-days: 3
+    groups:
+      npm:
+        patterns: ["*"]
+        update-types: [minor, patch]
+    commit-message:
+      prefix: chore
+      include: scope
+
+  - package-ecosystem: pip
+    directory: /identity/source
+    schedule:
+      interval: weekly
+    cooldown:
+      default-days: 3
+    groups:
+      pip:
+        patterns: ["*"]
+        update-types: [minor, patch]
+    commit-message:
+      prefix: chore
+      include: scope
